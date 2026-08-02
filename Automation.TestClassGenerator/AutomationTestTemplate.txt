@@ -1,0 +1,112 @@
+//TODO: Add in correct namespaces
+//TODO: If required, then add CRUD, DBCLUST Only, or DBTEST Only attribution
+//TODO: If test has Settings.IsMobileView flag, then create an abstract method and move logic to the appropriate desktop/mobile base classes.
+
+namespace {Namespace}
+{
+{AddTestWindows}
+	public class {D_TC}_Windows_Verify{MethodName} : {D_TC}_DesktopBase
+	{
+		public {D_TC}_Windows_Verify{MethodName}(ITestOutputHelper output) : base(output) { }
+
+		[Trait(LpTraits.Keys.Category, LpTraits.OperatingSystem.WindowsTen)]
+		[SkippableTheory]
+		[InlineData(TestConfiguration.Windows_Chrome_{TestConfiguration})]
+		public void {MethodName}(string config) => Validate(config);
+	}
+{EndAddTestWindows}
+{AddTestMac}
+	public class {D_TC}_Mac_Verify{MethodName} : {D_TC}_DesktopBase
+	{
+		public {D_TC}_Mac_Verify{MethodName}(ITestOutputHelper output) : base(output) { }
+
+		[Trait(LpTraits.Keys.Category, LpTraits.OperatingSystem.MacMojave)]
+		[SkippableTheory]
+		[InlineData(TestConfiguration.Mac_Safari_{TestConfiguration})]
+		public void {MethodName}(string config) => Validate(config);
+	}
+{EndAddTestMac}
+{AddTestIPad}
+	public class {D_TC}_iPad_Verify{MethodName} : {D_TC}_DesktopBase
+	{
+		public {D_TC}_iPad_Verify{MethodName}(ITestOutputHelper output) : base(output) { }
+
+		[Trait(LpTraits.Keys.Category, LpTraits.OperatingSystem.iOsTwelveTablet)]
+		[SkippableTheory]
+		[InlineData(TestConfiguration.iPad_Safari_{TestConfiguration})]
+		public void {MethodName}(string config) => Validate(config);
+	}
+{EndAddTestIPad}
+{AddTestIPhone}
+	public class {M_TC}_iPhone_Verify{MethodName} : {M_TC}_MobileBase
+	{
+		public {M_TC}_iPhone_Verify{MethodName}(ITestOutputHelper output) : base(output) { }
+
+		[Trait(LpTraits.Keys.Category, LpTraits.OperatingSystem.iOsTwelvePhone)]
+		[SkippableTheory]
+		[InlineData(TestConfiguration.iPhone_Safari_{TestConfiguration})]
+		public void {MethodName}(string config) => Validate(config);
+	}
+{EndAddTestIPhone}
+{AddTestAndroid}
+	public class {M_TC}_AndroidPhone_Verify{MethodName} : {M_TC}_MobileBase
+	{
+		public {M_TC}_AndroidPhone_Verify{MethodName}(ITestOutputHelper output) : base(output) { }
+
+		[Trait(LpTraits.Keys.Category, LpTraits.OperatingSystem.AndroidEightPhone)]
+		[SkippableTheory]
+		[InlineData(TestConfiguration.Android_Chrome_{TestConfiguration})]
+		public void {MethodName}(string config) => Validate(config);
+	}
+{EndAddTestAndroid}
+{AddTestSimulator}
+	public class {M_TC}_Simulator_Verify{MethodName} : {M_TC}_MobileBase
+	{
+		public {M_TC}_Simulator_Verify{MethodName}(ITestOutputHelper output) : base(output) { }
+
+		[Trait(LpTraits.Keys.Category, LpTraits.OperatingSystem.ChromeMobileSimulation)]
+		[SkippableTheory]
+		[InlineData(TestConfiguration.Windows_ChromeMobileView_{TestConfiguration})]
+		public void {MethodName}(string config) => Validate(config);
+	}
+{EndAddTestSimulator}
+	/// <summary>
+	/// {MethodDescription}
+	/// JIRA Task Link: https://lampstrack.lampsplus.com:8443/browse/{D_Task}
+	/// Test Case Link: https://lampstrack.lampsplus.com:8443/secure/Tests.jspa#/testCase/LP-{D_TC}
+	/// </summary>
+	[Trait(LpTraits.Keys.Category, LpTraits.Suite.Desktop)]
+	[Trait(LpTraits.RequiredTestCaseTags.TaskId, "{D_Task}"), Trait(LpTraits.RequiredTestCaseTags.TId, "LP-{D_TC}")]
+	public abstract class {D_TC}_DesktopBase : {D_TC}_{M_TC}_Base
+	{
+		protected {D_TC}_DesktopBase(ITestOutputHelper output) : base(output) { }
+	}
+
+
+	/// <summary>
+	/// {MethodDescription}
+	/// Jira Task Link: https://lampstrack.lampsplus.com:8443/browse/{M_Task}
+	/// Test Case Link: https://lampstrack.lampsplus.com:8443/secure/Tests.jspa#/testCase/LP-{M_TC}
+	/// </summary>
+	[Trait(LpTraits.Keys.Category, LpTraits.Suite.Mobile)]
+	[Trait(LpTraits.RequiredTestCaseTags.TaskId, "{M_Task}"), Trait(LpTraits.RequiredTestCaseTags.TId, "LP-{M_TC}")]
+	public abstract class {M_TC}_MobileBase : {D_TC}_{M_TC}_Base
+	{
+		protected {M_TC}_MobileBase(ITestOutputHelper output) : base(output) { }
+	}
+
+
+	public abstract class {D_TC}_{M_TC}_Base : {TestBaseClass} 
+	{
+		protected {D_TC}_{M_TC}_Base(ITestOutputHelper output) : base(output) { }
+		
+		/// <summary>
+		/// {MethodDescription}
+		/// </summary>
+		/// <param name="config"></param>
+		protected void Validate(string config)
+		{
+			//TODO: Add in implementation code for test
+		}
+	}
+}

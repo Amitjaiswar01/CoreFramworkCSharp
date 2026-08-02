@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <!-- The configuration and platform will be used to determine which assemblies to include from solution and
+				 project documentation sources -->
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>3e75bf8b-07ad-4904-8d46-efcbaaa22064</ProjectGuid>
+    <SHFBSchemaVersion>2017.9.26.0</SHFBSchemaVersion>
+    <!-- AssemblyName, Name, and RootNamespace are not used by SHFB but Visual Studio adds them anyway -->
+    <AssemblyName>TestAutomationDocumentation</AssemblyName>
+    <RootNamespace>TestAutomationDocumentation</RootNamespace>
+    <Name>TestAutomationDocumentation</Name>
+    <!-- SHFB properties -->
+    <FrameworkVersion>.NET Framework 4.7</FrameworkVersion>
+    <OutputPath>.\Help\</OutputPath>
+    <HtmlHelpName>TestAutomationDocumentation</HtmlHelpName>
+    <Language>en-US</Language>
+    <TransformComponentArguments>
+      <Argument Key="logoFile" Value="Help.png" xmlns="" />
+      <Argument Key="logoHeight" Value="" xmlns="" />
+      <Argument Key="logoWidth" Value="" xmlns="" />
+      <Argument Key="logoAltText" Value="" xmlns="" />
+      <Argument Key="logoPlacement" Value="left" xmlns="" />
+      <Argument Key="logoAlignment" Value="left" xmlns="" />
+      <Argument Key="maxVersionParts" Value="" xmlns="" />
+    </TransformComponentArguments>
+    <HelpFileFormat>HtmlHelp1</HelpFileFormat>
+    <SyntaxFilters>C#</SyntaxFilters>
+    <PresentationStyle>VS2013</PresentationStyle>
+    <BuildLogFile>LampsPlusTestAutomation</BuildLogFile>
+    <CleanIntermediates>True</CleanIntermediates>
+    <KeepLogFile>True</KeepLogFile>
+    <DisableCodeBlockComponent>False</DisableCodeBlockComponent>
+    <IndentHtml>False</IndentHtml>
+    <BuildAssemblerVerbosity>AllMessages</BuildAssemblerVerbosity>
+    <DocumentationSources>
+      <DocumentationSource sourceFile="..\LampsPlus.Automation\LampsPlus.Automation.csproj" subFolders="True" />
+      <DocumentationSource sourceFile="..\LampsPlus.Automation.RestApi\LampsPlus.Automation.RestApi.csproj" subFolders="True" />
+      <DocumentationSource sourceFile="..\LampsPlus.Automation.Tests\LampsPlus.Automation.Tests.csproj" subFolders="True" />
+    </DocumentationSources>
+    <PlugInConfigurations>
+      <PlugInConfig id="Assembly Binding Redirection" enabled="True">
+        <configuration useGAC="true">
+          <assemblyBinding />
+          <ignoreIfUnresolved>
+            <assemblyIdentity name="BusinessObjects.Licensing.KeycodeDecoder" />
+            <assemblyIdentity name="Microsoft.VisualStudio.TestTools.UITest.Playback" />
+            <assemblyIdentity name="xunit.core" />
+          </ignoreIfUnresolved>
+        </configuration>
+      </PlugInConfig>
+    </PlugInConfigurations>
+    <HelpTitle>Documentation for the Lamps Plus Test Automation project</HelpTitle>
+    <HelpFileVersion>1.0.0.0</HelpFileVersion>
+    <RootNamespaceContainer>True</RootNamespaceContainer>
+    <NamespaceGrouping>False</NamespaceGrouping>
+    <Preliminary>False</Preliminary>
+    <SdkLinkTarget>Blank</SdkLinkTarget>
+    <RootNamespaceTitle>Lamps Plus Test Automation</RootNamespaceTitle>
+    <NamingMethod>MemberName</NamingMethod>
+    <ContentPlacement>BelowNamespaces</ContentPlacement>
+    <VisibleItems>Attributes, ExplicitInterfaceImplementations, InheritedMembers, InheritedFrameworkMembers, InheritedFrameworkInternalMembers, Internals, Protected, SealedProtected, ProtectedInternalAsProtected, NoPIATypes, PublicCompilerGenerated, EditorBrowsableNever, NonBrowsable</VisibleItems>
+    <NamespaceSummaries>
+      <NamespaceSummaryItem name="(global)" isDocumented="False" />
+<NamespaceSummaryItem name="LampsPlus.Automation" isDocumented="True">Base namespace for Test Automation work. This namespace contains generic logic for UI testing with Selenium.</NamespaceSummaryItem>
+<NamespaceSummaryItem name="LampsPlus.Automation.Framework (Group)" isGroup="True" isDocumented="True">Provides generic functionality for UI testing using Selenium.</NamespaceSummaryItem>
+<NamespaceSummaryItem name="LampsPlus.Automation.Framework" isDocumented="True">Provides generic functionality for UI testing using Selenium.</NamespaceSummaryItem>
+<NamespaceSummaryItem name="LampsPlus.Automation.Framework.Enums" isDocumented="True">Provides general enums needed for the test automation framework.</NamespaceSummaryItem>
+<NamespaceSummaryItem name="LampsPlus.Automation.Framework.Utilities" isDocumented="True">Provides generic framework utilities to support UI testing with Selenium.</NamespaceSummaryItem>
+<NamespaceSummaryItem name="LampsPlus.Automation.RestApi.Framework" isDocumented="True">Provides a generic ability to make REST requests.</NamespaceSummaryItem>
+<NamespaceSummaryItem name="LampsPlus.Automation.Tests (Group)" isGroup="True" isDocumented="True">Container of Lamps Plus UI regression tests.</NamespaceSummaryItem>
+<NamespaceSummaryItem name="LampsPlus.Automation.Tests" isDocumented="True">Container of Lamps Plus UI regression tests.</NamespaceSummaryItem>
+<NamespaceSummaryItem name="LampsPlus.Automation.Tests._Docs" isDocumented="False" />
+<NamespaceSummaryItem name="LampsPlus.Automation.Tests.Constants" isDocumented="True">Container of static information needed for testing. This namespace contains all standard definitions for Lamps Plus tests.</NamespaceSummaryItem>
+<NamespaceSummaryItem name="LampsPlus.Automation.Tests.Databases.Actions" isDocumented="True">Contains helper methods for database actions. This is the main entry point to provide tests access to query data from the database.</NamespaceSummaryItem>
+<NamespaceSummaryItem name="LampsPlus.Automation.Tests.Databases.Entities" isDocumented="True">Contains models for database data. This contains the definitions for database objets.</NamespaceSummaryItem>
+<NamespaceSummaryItem name="LampsPlus.Automation.Tests.Databases.Queries" isDocumented="True">Contains raw SQL queries to use for tests.</NamespaceSummaryItem>
+<NamespaceSummaryItem name="LampsPlus.Automation.Tests.Enums" isDocumented="True">Contains Lamps Plus specific enums used for testing.</NamespaceSummaryItem>
+<NamespaceSummaryItem name="LampsPlus.Automation.Tests.Pages" isDocumented="True">Container of page objets for Lamps Plus test automation.</NamespaceSummaryItem>
+<NamespaceSummaryItem name="LampsPlus.Automation.Tests.Pages.CreateAccount" isDocumented="True">Lamps Plus page object.</NamespaceSummaryItem>
+<NamespaceSummaryItem name="LampsPlus.Automation.Tests.Pages.DevEnv" isDocumented="True">Lamps Plus page object.</NamespaceSummaryItem>
+<NamespaceSummaryItem name="LampsPlus.Automation.Tests.Pages.HeaderFooter" isDocumented="True">Lamps Plus page object.</NamespaceSummaryItem>
+<NamespaceSummaryItem name="LampsPlus.Automation.Tests.Pages.HeaderSignIn" isDocumented="True">Lamps Plus page object.</NamespaceSummaryItem>
+<NamespaceSummaryItem name="LampsPlus.Automation.Tests.Pages.Home" isDocumented="True">Lamps Plus page object.</NamespaceSummaryItem>
+<NamespaceSummaryItem name="LampsPlus.Automation.Tests.Pages.LpModal" isDocumented="True">Lamps Plus page object.</NamespaceSummaryItem>
+<NamespaceSummaryItem name="LampsPlus.Automation.Tests.Pages.ManageAccount" isDocumented="True">Lamps Plus page object.</NamespaceSummaryItem>
+<NamespaceSummaryItem name="LampsPlus.Automation.Tests.Pages.OrderConfirmation" isDocumented="True">Lamps Plus page object.</NamespaceSummaryItem>
+<NamespaceSummaryItem name="LampsPlus.Automation.Tests.Pages.Payment" isDocumented="True">Lamps Plus page object.</NamespaceSummaryItem>
+<NamespaceSummaryItem name="LampsPlus.Automation.Tests.Pages.ProductDetail" isDocumented="True">Lamps Plus page object.</NamespaceSummaryItem>
+<NamespaceSummaryItem name="LampsPlus.Automation.Tests.Pages.Search" isDocumented="True">Lamps Plus page object.</NamespaceSummaryItem>
+<NamespaceSummaryItem name="LampsPlus.Automation.Tests.Pages.ShippingInfo" isDocumented="True">Lamps Plus page object.</NamespaceSummaryItem>
+<NamespaceSummaryItem name="LampsPlus.Automation.Tests.Pages.ShoppingCart" isDocumented="True">Lamps Plus page object.</NamespaceSummaryItem>
+<NamespaceSummaryItem name="LampsPlus.Automation.Tests.Pages.SignIn" isDocumented="True">Lamps Plus page object.</NamespaceSummaryItem>
+<NamespaceSummaryItem name="LampsPlus.Automation.Tests.Pages.Sort" isDocumented="True">Lamps Plus page object.</NamespaceSummaryItem>
+<NamespaceSummaryItem name="LampsPlus.Automation.Tests.Pages.Wishlist" isDocumented="True">Lamps Plus page object.</NamespaceSummaryItem>
+<NamespaceSummaryItem name="LampsPlus.Automation.Tests.Utilities" isDocumented="True">Utilities that help enable Lamps Plus UI testing.</NamespaceSummaryItem>
+<NamespaceSummaryItem name="LampsPlus.Automation.Tests.Workflow" isDocumented="True">Workflows that provide ability to navigate and interact with multiple Lamps Plus page objects for testing.</NamespaceSummaryItem>
+<NamespaceSummaryItem name="LampsPlus (Group)" isGroup="True" isDocumented="True" />
+<NamespaceSummaryItem name="LampsPlus.Automation.Tests.Pages.ChangeEmailPreferences" isDocumented="True">Lamps Plus page object.</NamespaceSummaryItem>
+<NamespaceSummaryItem name="LampsPlus.Automation.RestApi" isDocumented="True">Provides a generic way to interact with REST services.</NamespaceSummaryItem></NamespaceSummaries>
+    <ComponentConfigurations>
+      <ComponentConfig id="API Token Resolution" enabled="True" xmlns="">
+        <component id="API Token Resolution">{@TokenFiles}
+<replace elements="/*//token" item="string(.)" /></component>
+      </ComponentConfig>
+      <ComponentConfig id="Code Block Component" enabled="True" xmlns="">
+        <component id="Code Block Component">
+          <basePath value="{@HtmlEncProjectFolder}" />
+          <outputPaths>{@HelpFormatOutputPaths}</outputPaths>
+          <allowMissingSource value="false" />
+          <removeRegionMarkers value="false" />
+          <colorizer syntaxFile="{@SHFBFolder}PresentationStyles\Colorizer\highlight.xml" styleFile="{@SHFBFolder}PresentationStyles\Colorizer\highlight.xsl" stylesheet="{@SHFBFolder}PresentationStyles\Colorizer\highlight.css" scriptFile="{@SHFBFolder}PresentationStyles\Colorizer\highlight.js" disabled="{@DisableCodeBlockComponent}" language="cs" tabSize="0" numberLines="true" outlining="false" keepSeeTags="false" defaultTitle="true" />
+        </component>
+      </ComponentConfig>
+    </ComponentConfigurations>
+    <ProjectSummary>
+    </ProjectSummary>
+  </PropertyGroup>
+  <!-- There are no properties for these groups.  AnyCPU needs to appear in order for Visual Studio to perform
+			 the build.  The others are optional common platform types that may appear. -->
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'DebugLocal|AnyCPU' ">
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'DebugLocal|x86' ">
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'DebugLocal|x64' ">
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'DebugGrid|AnyCPU' ">
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'DebugGrid|x86' ">
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'DebugGrid|x64' ">
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'ReleaseLocal|AnyCPU' ">
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'ReleaseLocal|x86' ">
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'ReleaseLocal|x64' ">
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'ReleaseGrid|AnyCPU' ">
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'ReleaseGrid|x86' ">
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'ReleaseGrid|x64' ">
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="Content" />
+    <Folder Include="Content\VersionHistory" />
+    <Folder Include="icons" />
+    <Folder Include="media" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Content\VersionHistory\v1.0.0.0.aml" />
+    <None Include="Content\VersionHistory\VersionHistory.aml" />
+    <None Include="Content\Welcome.aml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ContentLayout Include="ContentLayout.content" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icons\Help.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LampsPlus.Automation\LampsPlus.Automation.csproj">
+      <Name>LampsPlus.Automation</Name>
+      <Project>{51ED945B-7119-477D-B8AF-B7FDBDD21286}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\LampsPlus.Automation.RestApi\LampsPlus.Automation.RestApi.csproj">
+      <Name>LampsPlus.Automation.RestApi</Name>
+      <Project>{3E661B0F-9D1C-45D0-B1E7-1ABDCA46AFE1}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\LampsPlus.Automation.Tests\LampsPlus.Automation.Tests.csproj">
+      <Name>LampsPlus.Automation.Tests</Name>
+      <Project>{033ED73B-F987-45D6-B63C-2BB68F5CFAE1}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <!-- Import the SHFB build targets -->
+  <Import Project="$(SHFBROOT)\SandcastleHelpFileBuilder.targets" />
+  <!-- The pre-build and post-build event properties must appear *after* the targets file import in order to be
+			 evaluated correctly. -->
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+  </PropertyGroup>
+</Project>

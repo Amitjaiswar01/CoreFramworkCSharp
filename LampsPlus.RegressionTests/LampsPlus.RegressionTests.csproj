@@ -1,0 +1,778 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\xunit.runner.visualstudio.2.4.5\build\net462\xunit.runner.visualstudio.props" Condition="Exists('..\packages\xunit.runner.visualstudio.2.4.5\build\net462\xunit.runner.visualstudio.props')" />
+  <Import Project="..\packages\xunit.core.2.4.2\build\xunit.core.props" Condition="Exists('..\packages\xunit.core.2.4.2\build\xunit.core.props')" />
+  <Import Project="..\packages\xunit.runner.console.2.4.2\build\xunit.runner.console.props" Condition="Exists('..\packages\xunit.runner.console.2.4.2\build\xunit.runner.console.props')" />
+  <Import Project="$(SolutionDir)\packages\xunit.runner.visualstudio.2.4.1\build\net20\xunit.runner.visualstudio.props" Condition="Exists('$(SolutionDir)\packages\xunit.runner.visualstudio.2.4.1\build\net20\xunit.runner.visualstudio.props')" />
+  <Import Project="$(SolutionDir)\packages\xunit.runner.console.2.4.1\build\xunit.runner.console.props" Condition="Exists('$(SolutionDir)\packages\xunit.runner.console.2.4.1\build\xunit.runner.console.props')" />
+  <Import Project="$(SolutionDir)\packages\xunit.core.2.4.1\build\xunit.core.props" Condition="Exists('$(SolutionDir)\packages\xunit.core.2.4.1\build\xunit.core.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8C98F9F0-9463-41B2-A9CC-70D0A4FE0CF3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <LangVersion>latest</LangVersion>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LampsPlus.RegressionTests</RootNamespace>
+    <AssemblyName>LampsPlus.RegressionTests</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'ReleaseLocal|AnyCPU'">
+    <OutputPath>bin\ReleaseLocal\</OutputPath>
+    <DefineConstants>ReleaseLocal</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DebugGrid|AnyCPU'">
+    <OutputPath>bin\DebugGrid\</OutputPath>
+    <DefineConstants>DebugGrid</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugType>full</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DebugLocal|AnyCPU'">
+    <OutputPath>bin\DebugLocal\</OutputPath>
+    <DefineConstants>DebugLocal</DefineConstants>
+    <DebugType>full</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'ReleaseGrid|AnyCPU'">
+    <OutputPath>bin\ReleaseGrid\</OutputPath>
+    <DefineConstants>ReleaseGrid</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'ReleaseLocal|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\ReleaseLocal\</OutputPath>
+    <DefineConstants>ReleaseLocal</DefineConstants>
+    <DocumentationFile>bin\ReleaseLocal\LampsPlus.RegressionTests.xml</DocumentationFile>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DebugGrid|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\DebugGrid\</OutputPath>
+    <DefineConstants>DebugGrid</DefineConstants>
+    <DocumentationFile>bin\DebugGrid\LampsPlus.RegressionTests.xml</DocumentationFile>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DebugLocal|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\DebugLocal\</OutputPath>
+    <DefineConstants>DebugLocal</DefineConstants>
+    <DocumentationFile>bin\DebugLocal\LampsPlus.RegressionTests.xml</DocumentationFile>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'ReleaseGrid|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\ReleaseGrid\</OutputPath>
+    <DefineConstants>ReleaseGrid</DefineConstants>
+    <DocumentationFile>bin\ReleaseGrid\LampsPlus.RegressionTests.xml</DocumentationFile>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'ReleaseLocal|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\ReleaseLocal\</OutputPath>
+    <DefineConstants>ReleaseLocal</DefineConstants>
+    <DocumentationFile>bin\ReleaseLocal\LampsPlus.RegressionTests.xml</DocumentationFile>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DebugGrid|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\DebugGrid\</OutputPath>
+    <DefineConstants>DebugGrid</DefineConstants>
+    <DocumentationFile>bin\DebugGrid\LampsPlus.RegressionTests.xml</DocumentationFile>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DebugLocal|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\DebugLocal\</OutputPath>
+    <DefineConstants>DebugLocal</DefineConstants>
+    <DocumentationFile>bin\DebugLocal\LampsPlus.RegressionTests.xml</DocumentationFile>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'ReleaseGrid|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\ReleaseGrid\</OutputPath>
+    <DefineConstants>ReleaseGrid</DefineConstants>
+    <DocumentationFile>bin\ReleaseGrid\LampsPlus.RegressionTests.xml</DocumentationFile>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AngleSharp, Version=1.0.4.0, Culture=neutral, PublicKeyToken=e83494dcdc6d31ea, processorArchitecture=MSIL">
+      <HintPath>..\packages\AngleSharp.1.0.4\lib\net461\AngleSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Appium.Net, Version=4.3.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Appium.WebDriver.4.3.1\lib\net45\Appium.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="Brotli.Core, Version=2.0.4.2, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Brotli.NET.2.0.4.2\lib\net45\Brotli.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="BrotliSharpLib, Version=0.3.2.0, Culture=neutral, PublicKeyToken=3f4e2a1cd615fcb7, processorArchitecture=MSIL">
+      <HintPath>..\packages\BrotliSharpLib.0.3.3\lib\net451\BrotliSharpLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>$(SolutionDir)\packages\Castle.Core.4.3.1\lib\net45\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=1.4.2.13, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpZipLib.1.4.2\lib\netstandard2.0\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Ionic.Zip.Reduced, Version=1.9.1.8, Culture=neutral, PublicKeyToken=edbe51ad942a3f5c, processorArchitecture=MSIL">
+      <HintPath>..\packages\DotNetZip.Reduced.1.9.1.8\lib\net20\Ionic.Zip.Reduced.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.7.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Common, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodedUI.Framework.2.0.0\lib\Microsoft.VisualStudio.TestTools.UITest.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Extension, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodedUI.Framework.2.0.0\lib\Microsoft.VisualStudio.TestTools.UITest.Extension.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.TestTools.UITesting, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodedUI.Framework.2.0.0\lib\Microsoft.VisualStudio.TestTools.UITesting.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Win32.Registry, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Win32.Registry.5.0.0\lib\net461\Microsoft.Win32.Registry.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp, Version=106.5.4.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>$(SolutionDir)\packages\RestSharp.106.5.4\lib\net452\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="SeleniumExtras.PageObjects, Version=3.11.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DotNetSeleniumExtras.PageObjects.3.11.0\lib\net45\SeleniumExtras.PageObjects.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http, Version=4.1.1.3, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.Http.4.3.4\lib\net46\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime, Version=4.1.1.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.4.3.1\lib\net462\System.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.InteropServices.RuntimeInformation.4.3.0\lib\net45\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.AccessControl, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.AccessControl.5.0.0\lib\net461\System.Security.AccessControl.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Principal.Windows, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Principal.Windows.5.0.0\lib\net461\System.Security.Principal.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encoding.CodePages, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encoding.CodePages.6.0.0\lib\net461\System.Text.Encoding.CodePages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encodings.Web, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encodings.Web.7.0.0\lib\net462\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=7.0.0.3, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Json.7.0.3\lib\net462\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>$(SolutionDir)\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TechTalk.SpecFlow, Version=2.4.0.0, Culture=neutral, PublicKeyToken=0778194805d6db41, processorArchitecture=MSIL">
+      <HintPath>$(SolutionDir)\packages\SpecFlow.2.4.1\lib\net45\TechTalk.SpecFlow.dll</HintPath>
+    </Reference>
+    <Reference Include="Validation, Version=2.4.0.0, Culture=neutral, PublicKeyToken=2fc06f0d701809a7, processorArchitecture=MSIL">
+      <HintPath>$(SolutionDir)\packages\Validation.2.4.18\lib\net45\Validation.dll</HintPath>
+    </Reference>
+    <Reference Include="WebDriver, Version=3.141.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Selenium.WebDriver.3.141.0\lib\net45\WebDriver.dll</HintPath>
+    </Reference>
+    <Reference Include="WebDriver.Support, Version=3.141.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>$(SolutionDir)\packages\Selenium.Support.3.141.0\lib\net45\WebDriver.Support.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="xRetry, Version=1.9.0.0, Culture=neutral, PublicKeyToken=8d689297dc95b0e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\xRetry.1.9.0\lib\net452\xRetry.dll</HintPath>
+    </Reference>
+    <Reference Include="xunit.abstractions, Version=2.0.0.0, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
+      <HintPath>$(SolutionDir)\packages\xunit.abstractions.2.0.3\lib\net35\xunit.abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="xunit.assert, Version=2.4.2.0, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
+      <HintPath>..\packages\xunit.assert.2.4.2\lib\netstandard1.1\xunit.assert.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="xunit.core, Version=2.4.2.0, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
+      <HintPath>..\packages\xunit.extensibility.core.2.4.2\lib\net452\xunit.core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="xunit.execution.desktop, Version=2.4.2.0, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
+      <HintPath>..\packages\xunit.extensibility.execution.2.4.2\lib\net452\xunit.execution.desktop.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xunit.Priority, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Xunit.Priority.1.1.6\lib\net452\Xunit.Priority.dll</HintPath>
+    </Reference>
+    <Reference Include="Xunit.SkippableFact, Version=1.4.0.0, Culture=neutral, PublicKeyToken=b2b52da82b58eb73, processorArchitecture=MSIL">
+      <HintPath>..\packages\Xunit.SkippableFact.1.4.13\lib\net452\Xunit.SkippableFact.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\AddingToCartAndWishList\T345_T536_VerifyUserCanAddFromWishListToCart\T345_VerifyUserCanAddFromWishListToCart.cs" />
+    <Compile Include="Common\AddingToCartAndWishList\T345_T536_VerifyUserCanAddFromWishListToCart\T536_VerifyUserCanAddFromWishListToCart.cs" />
+    <Compile Include="Common\AddingToCartAndWishList\T346_T537_VerifySignedUserCanSaveAWishList\T346_VerifySignedUserCanSaveAWishList.cs" />
+    <Compile Include="Common\AddingToCartAndWishList\T346_T537_VerifySignedUserCanSaveAWishList\T537_VerifySignedUserCanSaveAWishList.cs" />
+    <Compile Include="Common\AddingToCartAndWishList\T348_T540_VerifyUserCanOpenSavedWishList\T540_VerifyUserCanOpenSavedWishList.cs" />
+    <Compile Include="Common\AddingToCartAndWishList\T348_T540_VerifyUserCanOpenSavedWishList\T348_VerifyUserCanOpenSavedWishList.cs" />
+    <Compile Include="Common\AddingToCartAndWishList\T351_T538_VerifyQtyAddedFromPdpToCart\T351_VerifyQtyAddedFromPdpToCart.cs" />
+    <Compile Include="Common\AddingToCartAndWishList\T351_T538_VerifyQtyAddedFromPdpToCart\T538_VerifyQtyAddedFromPdpToCart.cs" />
+    <Compile Include="Common\AddingToCartAndWishList\T350_T541_VerifyUserCanRemoveItemFromWishList\T350_VerifyUserCanRemoveItemFromWishList.cs" />
+    <Compile Include="Common\AddingToCartAndWishList\T350_T541_VerifyUserCanRemoveItemFromWishList\T541_VerifyUserCanRemoveItemFromWishList.cs" />
+    <Compile Include="Common\AddingToCartAndWishList\T352_T7576_VerifyAddingItemsWithBuildFullSystemToCart\T352_VerifyAddingItemsWithBuildFullSystem.cs" />
+    <Compile Include="Common\AddingToCartAndWishList\T352_T7576_VerifyAddingItemsWithBuildFullSystemToCart\T7576_VerifyAddingItemsWithBuildFullSystem.cs" />
+    <Compile Include="Common\AddingToCartAndWishList\T355_T7577_VerifyAddingItemsWithBuildFullSystemToWishList\T355_VerifyAddingItemsWithBuildFullSystemToWishList.cs" />
+    <Compile Include="Common\AddingToCartAndWishList\T355_T7577_VerifyAddingItemsWithBuildFullSystemToWishList\T7577_VerifyAddingItemsWithBuildFullSystemToWishList.cs" />
+    <Compile Include="Common\AddingToCartAndWishList\T354_T539_VerifyCorrectQtyAddedToWishListAddingItemPdp\T354_VerifyCorrectQtyAddedToWishListAddingItemPdp.cs" />
+    <Compile Include="Common\AddingToCartAndWishList\T354_T539_VerifyCorrectQtyAddedToWishListAddingItemPdp\T539_VerifyCorrectQtyAddedToWishListAddingItemPdp.cs" />
+    <Compile Include="Common\AddingToCartAndWishList\T7664_T7665_VerifyUserAddItemCartFromRecentlyViewed\T7664_VerifyUserAddItemCartFromRecentlyViewed.cs" />
+    <Compile Include="Common\AddingToCartAndWishList\T7664_T7665_VerifyUserAddItemCartFromRecentlyViewed\T7665_VerifyUserAddItemCartFromRecentlyViewed.cs" />
+    <Compile Include="Common\AddingToCartAndWishList\T7637_T7638_VerifyUserCanAddOpenBoxItemToTheCart\T7637_VerifyUserCanAddOpenBoxItemToTheCart.cs" />
+    <Compile Include="Common\AddingToCartAndWishList\T7637_T7638_VerifyUserCanAddOpenBoxItemToTheCart\T7638_VerifyUserCanAddOpenBoxItemToTheCart.cs" />
+    <Compile Include="Common\OtherPages\T7997_T7998_VerifyAddToCartFunctionalityOnSfpPage\T7997_VerifyAddToCartFunctionalityOnSfpPage.cs" />
+    <Compile Include="Common\OtherPages\T7997_T7998_VerifyAddToCartFunctionalityOnSfpPage\T7998_VerifyAddToCartFunctionalityOnSfpPage.cs" />
+    <Compile Include="Common\CartOverview\T107_T392_VerifyOrderTotal\T392_VerifyOrderTotal.cs" />
+    <Compile Include="Common\CartOverview\T109_T393_VerifyItemOnSalePriceInShoppingCart\T109_VerifyItemOnSalePriceInShoppingCart.cs" />
+    <Compile Include="Common\CartOverview\T109_T393_VerifyItemOnSalePriceInShoppingCart\T393_VerifyItemOnSalePriceInShoppingCart.cs" />
+    <Compile Include="Common\CartOverview\T111_T395_VerifyTotalChangeAccordingToShip\T111_VerifyTotalChangeAccordingToShip .cs" />
+    <Compile Include="Common\CartOverview\T111_T395_VerifyTotalChangeAccordingToShip\T395_VerifyTotalChangeAccordingToShip .cs" />
+    <Compile Include="Common\CartOverview\T110_T394_VerifyClickOnItemInCartBringsUserToItemPdp\T110_VerifyClickOnItemInCartBringsUserToItemPdp.cs" />
+    <Compile Include="Common\CartOverview\T110_T394_VerifyClickOnItemInCartBringsUserToItemPdp\T394_VerifyClickOnItemInCartBringsUserToItemPdp.cs" />
+    <Compile Include="Common\CartOverview\T132_T398_VerifyValidPromoCodeCanBeAddedToCart\T132_VerifyValidPromoCodeCanBeAddedToCart.cs" />
+    <Compile Include="Common\CartOverview\T132_T398_VerifyValidPromoCodeCanBeAddedToCart\T398_VerifyValidPromoCodeCanBeAddedToCart.cs" />
+    <Compile Include="Common\CartOverview\T131_T397_VerifyInvalidPromoCodeFunctionality\T131_Windows_VerifyInvalidPromoCodeFunctionality.cs" />
+    <Compile Include="Common\CartOverview\T131_T397_VerifyInvalidPromoCodeFunctionality\T397_VerifyInvalidPromoCodeFunctionality.cs" />
+    <Compile Include="Common\CartOverview\T129_T396_VerifyNonEsiCannotSubmitLessThanTenDollars\T129_VerifyNonEsiCannotSubmitLessThanTenDollars.cs" />
+    <Compile Include="Common\CartOverview\T129_T396_VerifyNonEsiCannotSubmitLessThanTenDollars\T396_VerifyNonEsiCannotSubmitLessThanTenDollars.cs" />
+    <Compile Include="Common\CartOverview\T7510_T7511_VerifyTheShipsTodayLogicIsCorrectOnTheShippingOptionsModal\T7510_VerifyTheShipsTodayLogicIsCorrectOnTheShippingOptionsModal.cs" />
+    <Compile Include="Common\CartOverview\T7510_T7511_VerifyTheShipsTodayLogicIsCorrectOnTheShippingOptionsModal\T7511_VerifyTheShipsTodayLogicIsCorrectOnTheShippingOptionsModal.cs" />
+    <Compile Include="Common\CartOverview\T7935_T7936_VerifyTheItemQuantityCount\T7935_VerifyTheItemQuantityCount.cs" />
+    <Compile Include="Common\CartOverview\T7935_T7936_VerifyTheItemQuantityCount\T7936_VerifyTheItemQuantityCount.cs" />
+    <Compile Include="Common\CartOverview\T7957_T7958_VerifyRemoveProductFunctionalityOnTheCartPage\T7957_VerifyRemoveProductFunctionalityOnTheCartPage.cs" />
+    <Compile Include="Common\CartOverview\T7957_T7958_VerifyRemoveProductFunctionalityOnTheCartPage\T7958_VerifyRemoveProductFunctionalityOnTheCartPage.cs" />
+    <Compile Include="Common\CartOverview\T7959_T7960_VerifyTheRemoveItemFunctionalityMessageOnTheCartPage\T7959_VerifyTheRemoveItemFunctionalityMessageOnTheCartPage.cs" />
+    <Compile Include="Common\CartOverview\T7959_T7960_VerifyTheRemoveItemFunctionalityMessageOnTheCartPage\T7960_VerifyTheRemoveItemFunctionalityMessageOnTheCartPage.cs" />
+    <Compile Include="Common\Certona\T314_T507_VerifyCertonaSchemaForHomepage\T314_VerifyCertonaSchemaForHomepage.cs" />
+    <Compile Include="Common\Certona\T314_T507_VerifyCertonaSchemaForHomepage\T507_VerifyCertonaSchemaForHomepage.cs" />
+    <Compile Include="Common\ChangeEmailPreferences\T291_T492_VerifyEmailSubscribeShowsThankYouMessage\T291_VerifyEmailSubscribeShowsThankYouMessage.cs" />
+    <Compile Include="Common\ChangeEmailPreferences\T291_T492_VerifyEmailSubscribeShowsThankYouMessage\T492_VerifyEmailSubscribeShowsThankYouMessage.cs" />
+    <Compile Include="Common\ChangeEmailPreferences\T292_T493_VerifyThatProvidingEmailShowsThankYou\T292_VerifyThatProvidingEmailShowsThankYou.cs" />
+    <Compile Include="Common\ChangeEmailPreferences\T292_T493_VerifyThatProvidingEmailShowsThankYou\T493_VerifyThatProvidingEmailShowsThankYou.cs" />
+    <Compile Include="Common\CreateAccount\T294_T495_VerifyUserCanCreateNewAccount\T294_VerifyUserCanCreateNewAccount.cs" />
+    <Compile Include="Common\CreateAccount\T294_T495_VerifyUserCanCreateNewAccount\T495_VerifyUserCanCreateNewAccount.cs" />
+    <Compile Include="Common\CreateAccount\T296_T497_VerifyFacebookRedirection\T296_VerifyFacebookRedirection.cs" />
+    <Compile Include="Common\CreateAccount\T296_T497_VerifyFacebookRedirection\T497_VerifyFacebookRedirection.cs" />
+    <Compile Include="Common\HeaderFooter\T271_T483_VerifyHeaderFooterNavigationLinks\T271_VerifyHeaderFooterNavigationLinks.cs" />
+    <Compile Include="Common\HeaderFooter\T271_T483_VerifyHeaderFooterNavigationLinks\T483_VerifyHeaderFooterNavigationLinks.cs" />
+    <Compile Include="Common\HeaderFooter\T273_T7785_VerifyPresenceOfEmailSubscribeBox\T273_VerifyPresenceOfEmailSubscribeBox.cs" />
+    <Compile Include="Common\HeaderFooter\T273_T7785_VerifyPresenceOfEmailSubscribeBox\T7785_VerifyPresenceOfEmailSubscribeBox.cs" />
+    <Compile Include="Common\HeaderFooter\T543_T6995_VerifyHeaderFooterForProfessional\T543_VerifyHeaderFooterForProfessional.cs" />
+    <Compile Include="Common\HeaderFooter\T543_T6995_VerifyHeaderFooterForProfessional\T6995_VerifyHeaderFooterForProfessional.cs" />
+    <Compile Include="Common\Homepage\T542_T558_VerifySplashImageOnHomepage\T542_VerifySplashImageOnHomepage.cs" />
+    <Compile Include="Common\Homepage\T542_T558_VerifySplashImageOnHomepage\T558_VerifySplashImageOnHomepage.cs" />
+    <Compile Include="Common\ManageAccount\T299_T499_VerifyUserCanEditAccountInfo\T299_VerifyUserCanEditAccountInfo.cs" />
+    <Compile Include="Common\ManageAccount\T299_T499_VerifyUserCanEditAccountInfo\T499_VerifyUserCanEditAccountInfo.cs" />
+    <Compile Include="Common\ManageAccount\T301_T501_VerifyUserCanChangePaymentOption\T301_VerifyUserCanChangePaymentOption.cs" />
+    <Compile Include="Common\ManageAccount\T301_T501_VerifyUserCanChangePaymentOption\T501_VerifyUserCanChangePaymentOption.cs" />
+    <Compile Include="Common\ManageAccount\T302_T502_VerifyUserCanDeletePaymentOption\T302_VerifyUserCanDeletePaymentOption.cs" />
+    <Compile Include="Common\ManageAccount\T302_T502_VerifyUserCanDeletePaymentOption\T502_VerifyUserCanDeletePaymentOption.cs" />
+    <Compile Include="Common\ManageAccount\T303_T503_VerifyUserCanAddShippingAddress\T303_VerifyUserCanAddShippingAddress.cs" />
+    <Compile Include="Common\ManageAccount\T303_T503_VerifyUserCanAddShippingAddress\T503_VerifyUserCanAddShippingAddress.cs" />
+    <Compile Include="Common\ManageAccount\T304_T504_VerifyUserCanEditShippingAddress\T304_VerifyUserCanEditShippingAddress.cs" />
+    <Compile Include="Common\ManageAccount\T304_T504_VerifyUserCanEditShippingAddress\T504_VerifyUserCanEditShippingAddress.cs" />
+    <Compile Include="Common\OrderConfirmation\T557_T568_VerifyElementsOfConfirmationPage\T557_VerifyElementsOfConfirmationPage.cs" />
+    <Compile Include="Common\OrderConfirmation\T557_T568_VerifyElementsOfConfirmationPage\T568_VerifyElementsOfConfirmationPage.cs" />
+    <Compile Include="Common\OrderConfirmation\T7525_T7526_VerifyMinimalAccountOrder\T7525_VerifyMinimalAccountOrder.cs" />
+    <Compile Include="Common\OrderConfirmation\T7525_T7526_VerifyMinimalAccountOrder\T7526_VerifyMinimalAccountOrder.cs" />
+    <Compile Include="Common\ManageAccount\T305_T505_VerifyUserCanAccessChangeEmailPreferencesPage\T305_VerifyUserCanAccessChangeEmailPreferencesPage.cs" />
+    <Compile Include="Common\ManageAccount\T305_T505_VerifyUserCanAccessChangeEmailPreferencesPage\T505_VerifyUserCanAccessChangeEmailPreferencePage.cs" />
+    <Compile Include="Common\ManageAccount\T306_T506_VerifyDatabaseWhenUpdatingPhoneNumbers\T306_VerifyDatabaseWhenUpdatingPhoneNumbers.cs" />
+    <Compile Include="Common\ManageAccount\T306_T506_VerifyDatabaseWhenUpdatingPhoneNumbers\T506_VerifyDatabaseWhenUpdatingPhoneNumbers.cs" />
+    <Compile Include="Common\OtherPages\T7769_T7803_VerifyFunctionalityOfStickyNavOnSfp\T7803_VerifyFunctionalityOfStickyNavOnSFP.cs" />
+    <Compile Include="Common\Payment\T136_T7032_VerifyCanNotSubmitIntOrderUnderTwoHundredDollars\T7032_VerifyCanNotSubmitIntOrderUnderTwoHundredDollars.cs" />
+    <Compile Include="Common\OrderHistory\T275_T486_VerifySignedOutUsersOnlySeePartialInfoOnTheOrderHistoryPage\T275_VerifySignedOutUsersOnlySeePartialInfoOnTheOrderHistoryPage.cs" />
+    <Compile Include="Common\OrderHistory\T275_T486_VerifySignedOutUsersOnlySeePartialInfoOnTheOrderHistoryPage\T486_VerifySignedOutUsersOnlySeePartialInfoOnTheOrderHistoryPage.cs" />
+    <Compile Include="Common\Payment\T177_T426_VerifyGiftCertificateOptionNotDisplayed\T177_VerifyGiftCertificateOptionNotDisplayed.cs" />
+    <Compile Include="Common\Payment\T177_T426_VerifyGiftCertificateOptionNotDisplayed\T426_VerifyGiftCertificateOptionNotDisplayed.cs" />
+    <Compile Include="Common\Payment\T178_T427_VerifyWireTransferOptionNotDisplayed\T178_VerifyWireTransferOptionNotDisplated.cs" />
+    <Compile Include="Common\Payment\T178_T427_VerifyWireTransferOptionNotDisplayed\T427_VerifyWireTransferOptionNotDisplayed.cs" />
+    <Compile Include="Common\Payment\T179_T428_VerifySavedPaymentOptionNotDisplayedTests\T179_VerifySavedPaymentOptionNotDisplayedTests.cs" />
+    <Compile Include="Common\Payment\T179_T428_VerifySavedPaymentOptionNotDisplayedTests\T428_VerifySavedPaymentOptionNotDisplayedTests.cs" />
+    <Compile Include="Common\Payment\T183_T430_VerifyCheckOptionNotDisplayed\T183_VerifyCheckOptionNotDisplayed.cs" />
+    <Compile Include="Common\Payment\T183_T430_VerifyCheckOptionNotDisplayed\T430_VerifyCheckOptionNotDisplayed.cs" />
+    <Compile Include="Common\Payment\T181_T429_VerifyProp65WarningOnlyDisplaysForCalifornia\T181_VerifyProp65WarningOnlyDisplaysForCalifornia.cs" />
+    <Compile Include="Common\Payment\T181_T429_VerifyProp65WarningOnlyDisplaysForCalifornia\T429_VerifyProp65WarningOnlyDisplaysForCalifornia.cs" />
+    <Compile Include="Common\Payment\T185_T432_VerifyUserCanDeletePaymentOption\T185_VerifyUserCanDeletePaymentOption.cs" />
+    <Compile Include="Common\Payment\T185_T432_VerifyUserCanDeletePaymentOption\T432_VerifyUserCanDeletePaymentOption.cs" />
+    <Compile Include="Common\Payment\T184_T431_VerifyPurchaseOrderOptionNotDisplayed\T184_VerifyPurchaseOrderOptionNotDisplayed.cs" />
+    <Compile Include="Common\Payment\T184_T431_VerifyPurchaseOrderOptionNotDisplayed\T431_VerifyPurchaseOrderOptionNotDisplayed.cs" />
+    <Compile Include="Common\Payment\T186_T433_VerifyShippingCostIsCorrect\T186_VerifyShippingCostIsCorrect.cs" />
+    <Compile Include="Common\Payment\T186_T433_VerifyShippingCostIsCorrect\T433_VerifyShippingCostIsCorrect.cs" />
+    <Compile Include="Common\Payment\T187_T434_VerifyUserCanNavigateBackToShippingPage\T187_VerifyUserCanNavigateBackToShippingPage.cs" />
+    <Compile Include="Common\Payment\T187_T434_VerifyUserCanNavigateBackToShippingPage\T434_VerifyUserCanNavigateBackToShippingPage.cs" />
+    <Compile Include="Common\Payment\T7982_T7984_VerifyPayPalWidgetPriceBetween1500to9000\T7982_VerifyPayPalWidgetPriceBetween1500to9000.cs" />
+    <Compile Include="Common\Payment\T7982_T7984_VerifyPayPalWidgetPriceBetween1500to9000\T7984_VerifyPayPalWidgetPriceBetween1500to9000.cs" />
+    <Compile Include="Common\Pixels\T7229_T7230_VerifyEcommerceGoogleDataPopulatedWithNoActiveABTest\T7230_VerifyGoogleDataNoABtest.cs" />
+    <Compile Include="Common\Pixels\T7229_T7230_VerifyEcommerceGoogleDataPopulatedWithNoActiveABTest\T7229_VerifyGoogleDataNoABtest.cs" />
+    <Compile Include="Common\ProductDetail\T221_T455_VerifyFreeShippingOnProduct\T221_VerifyFreeShippingOnProduct.cs" />
+    <Compile Include="Common\ProductDetail\T221_T455_VerifyFreeShippingOnProduct\T455_VerifyFreeShippingOnProduct.cs" />
+    <Compile Include="Common\ProductDetail\T228_T7582_VerifyPopularColorsSliderArtShadesNumber\T228_VerifyPopularColorsSliderArtShadesNumber.cs" />
+    <Compile Include="Common\ProductDetail\T228_T7582_VerifyPopularColorsSliderArtShadesNumber\T7582_VerifyPopularColorsSliderArtShadesNumber.cs" />
+    <Compile Include="Common\ProductDetail\T7748_T7749_VerifyPayPalWidgetWithProductPriceProductLessThan30dollar\T7748_VerifyPayPalWidgetWithProductPriceProductLessThan30doller.cs" />
+    <Compile Include="Common\ProductDetail\T7748_T7749_VerifyPayPalWidgetWithProductPriceProductLessThan30dollar\T7749_VerifyPayPalWidgetWithProductPriceProductLessThan30doller.cs" />
+    <Compile Include="Common\ProductDetail\T7945_T7947_VerifyNeedHelpLinkInStoreAreaAndOutChatHr\T7945_VerifyNeedHelpLinkInStoreAreaAndOutChatHr.cs" />
+    <Compile Include="Common\ProductDetail\T7945_T7947_VerifyNeedHelpLinkInStoreAreaAndOutChatHr\T7947_VerifyNeedHelpLinkInStoreAreaAndOutChatHr.cs" />
+    <Compile Include="Common\Payment\T7981_T7983_VerifyPayPalWidgetPricesBetween30To1350\T7981_VerifyPayPalWidgetPricesBetween30To1350.cs" />
+    <Compile Include="Common\Payment\T7981_T7983_VerifyPayPalWidgetPricesBetween30To1350\T7983_VerifyPayPalWidgetPricesBetween30To1350.cs" />
+    <Compile Include="Common\ProductDetail\T7970_T7973_VerifyOpenBoxProductOnRegularPrice\T7970_VerifyOpenBoxProductOnRegularPrice.cs" />
+    <Compile Include="Common\ProductDetail\T7970_T7973_VerifyOpenBoxProductOnRegularPrice\T7973_VerifyOpenBoxProductOnRegularPrice.cs" />
+    <Compile Include="Common\Search\T335_T527_VerifySearchFieldWithSingleSku\T335_VerifySearchFieldWithSingleSku.cs" />
+    <Compile Include="Common\Search\T335_T527_VerifySearchFieldWithSingleSku\T527_VerifySearchFieldWithSingleSku.cs" />
+    <Compile Include="Common\Search\T7471_T7473_VerifyAutoSuggestionBoxAppears\T7471_VerifyAutoSuggestBoxAppears.cs" />
+    <Compile Include="Common\Search\T7471_T7473_VerifyAutoSuggestionBoxAppears\T7473_VerifyAutoSuggestBoxAppears.cs" />
+    <Compile Include="Common\Search\T7472_T7474_VerifyHardCodedSearchResults\T7472_VerifyHardCodedSearchResults.cs" />
+    <Compile Include="Common\Search\T7472_T7474_VerifyHardCodedSearchResults\T7474_VerifyHardCodedSearchResults.cs" />
+    <Compile Include="Common\Search\T7807_T7810_VerifySearchBoxDisplaysRecentSearchesAndRecentlyViewed\T7807_VerifySearchBoxDisplaysRecentSearches.cs" />
+    <Compile Include="Common\Search\T7807_T7810_VerifySearchBoxDisplaysRecentSearchesAndRecentlyViewed\T7810_VerifySearchBoxDisplaysRecentSearches.cs" />
+    <Compile Include="Common\Search\T7808_T7811_VerifySearchBoxDisplaysTopSearchTerms\T7808_VerifySearchBoxDisplaysTopSearchTerms.cs" />
+    <Compile Include="Common\Search\T7808_T7811_VerifySearchBoxDisplaysTopSearchTerms\T7811_VerifySearchBoxDisplaysTopSearchTerms.cs" />
+    <Compile Include="Common\Search\T7809_T7812_VerifySearchBoxDisplaysTopCategorySearchTerms\T7809_VerifySearchBoxDisplaysTopCategorySearchTerms.cs" />
+    <Compile Include="Common\Search\T7809_T7812_VerifySearchBoxDisplaysTopCategorySearchTerms\T7812_VerifySearchBoxDisplaysTopCategorySearchTerms.cs" />
+    <Compile Include="Common\Search\T7823_T7824_VerifySearchResultSetCanFilteredUsingSearchTermInSearchBarFilter\T7823_VerifySearchResultSetCanFilteredUsingSearchTermInSearchBarFilter.cs" />
+    <Compile Include="Common\Search\T7823_T7824_VerifySearchResultSetCanFilteredUsingSearchTermInSearchBarFilter\T7824_VerifySearchResultSetCanFilteredUsingSearchTermInSearchBarFilter.cs" />
+    <Compile Include="Common\Search\T7893_T7894_VerifyStickyHeaderWithSearchBar\T7893_VerifyStickyHeaderWithSearchBar.cs" />
+    <Compile Include="Common\Search\T7893_T7894_VerifyStickyHeaderWithSearchBar\T7894_VerifyStickyHeaderWithSearchBar.cs" />
+    <Compile Include="Common\Shipping\T164_T414_VerifyWarningMessageChangeOnZipCodeChange\T164_VerifyWarningMessageChangeOnZipCodeChange.cs" />
+    <Compile Include="Common\Shipping\T164_T414_VerifyWarningMessageChangeOnZipCodeChange\T414_VerifyWarningMessageChangeOnZipCodeChange.cs" />
+    <Compile Include="Common\Shipping\T165_T415_VerifyFedExMaintainEnteredAddressOption\T165_VerifyFedExMaintainEnteredAddressOption.cs" />
+    <Compile Include="Common\Shipping\T165_T415_VerifyFedExMaintainEnteredAddressOption\T415_VerifyFedExMaintainEnteredAddressOption.cs" />
+    <Compile Include="Common\Shipping\T166_T416_VerifyPoBoxValidationWarning\T166_VerifyPoBoxValidationWarning.cs" />
+    <Compile Include="Common\Shipping\T166_T416_VerifyPoBoxValidationWarning\T416_VerifyPoBoxValidationWarning.cs" />
+    <Compile Include="Common\Shipping\T167_T417_VerifySavedShippingAddressIsAvailableAndCanBeUsed\T167_VerifySavedShippingAddressIsAvailableAndCanBeUsed.cs" />
+    <Compile Include="Common\Shipping\T167_T417_VerifySavedShippingAddressIsAvailableAndCanBeUsed\T417_VerifySavedShippingAddressIsAvailableAndCanBeUsed.cs" />
+    <Compile Include="Common\Shipping\T7519_T7520_VerifyFedExSimilarVerifiedAddressOption\T7519_VerifyFedExSimilarVerifiedAddressOption.cs" />
+    <Compile Include="Common\Shipping\T7519_T7520_VerifyFedExSimilarVerifiedAddressOption\T7520_VerifyFedExSimilarVerifiedAddressOption.cs" />
+    <Compile Include="Common\Shipping\T7521_T7522_VerifyUserCanEditAddressFedExModal\T7521_VerifyUserCanEditAddressFedExModal.cs" />
+    <Compile Include="Common\Shipping\T7521_T7522_VerifyUserCanEditAddressFedExModal\T7522_VerifyUserCanEditAddressFedExModal.cs" />
+    <Compile Include="Common\Shipping\T7523_T7524_VerifyFedExModalShowsAptOptions\T7523_VerifyFedExModalShowsAptOptions.cs" />
+    <Compile Include="Common\Shipping\T7523_T7524_VerifyFedExModalShowsAptOptions\T7524_VerifyFedExModalShowsAptOptions.cs" />
+    <Compile Include="Common\Shipping\T7976_T7977_VerifyTaxLabelChangesFromEstimatedTaxtoTax\T7977_VerifyTaxLabelChangesFromEstimatedTaxtoTax.cs" />
+    <Compile Include="Common\Sort\T199_T439_VerifySortSoldOutCallOut\T199_VerifySortSoldOutCallOut.cs" />
+    <Compile Include="Common\Sort\T199_T439_VerifySortSoldOutCallOut\T439_VerifySortSoldOutCallOut.cs" />
+    <Compile Include="Common\Sort\T200_T440_VerifyClickProductImageDisplayPage\T200_VerifyClickProductImageDisplayPage.cs" />
+    <Compile Include="Common\Sort\T200_T440_VerifyClickProductImageDisplayPage\T440_VerifyClickProductImageDisplayPage.cs" />
+    <Compile Include="Common\Sort\T201_T442_VerifyQuantityCalloutForClearanceItems\T201_VerifyQuantityCalloutForClearanceItems.cs" />
+    <Compile Include="Common\Sort\T201_T442_VerifyQuantityCalloutForClearanceItems\T442_VerifyQuantityCalloutForClearanceItems.cs" />
+    <Compile Include="Common\Sort\T203_T443_VerifyQuantityCallOut\T203_VerifyQuantityCallOut.cs" />
+    <Compile Include="Common\Sort\T203_T443_VerifyQuantityCallOut\T443_VerifyQuantityCallOut.cs" />
+    <Compile Include="Common\Sort\T204_T444_VerifyClearancePriceAndFlag\T204_VerifyClearancePriceAndFlag.cs" />
+    <Compile Include="Common\Sort\T204_T444_VerifyClearancePriceAndFlag\T444_VerifyClearancePriceAndFlag.cs" />
+    <Compile Include="Common\Sort\T208_T448_VerifyQuantityLeftAndDailySaleCallOut\T208_VerifyQuantityLeftAndDailySaleCallOut.cs" />
+    <Compile Include="Common\Sort\T208_T448_VerifyQuantityLeftAndDailySaleCallOut\T448_VerifyQuantityLeftAndDailySaleCallOut.cs" />
+    <Compile Include="Common\Sort\T205_T445_VerifyDailySaleCallout\T205_VerifyDailySaleCallout.cs" />
+    <Compile Include="Common\Sort\T205_T445_VerifyDailySaleCallout\T445_VerifyDailySaleCallout.cs" />
+    <Compile Include="Common\Sort\T211_T449_VerifySaleCallOut\T211_VerifySaleCallOut.cs" />
+    <Compile Include="Common\Sort\T211_T449_VerifySaleCallOut\T449_VerifySaleCallOut.cs" />
+    <Compile Include="Common\Sort\T212_T450_VerifyCanonicalOrderingOfSortFilterAttributes\T212_VerifyCanonicalOrderingOfSortFilterAttributes.cs" />
+    <Compile Include="Common\Sort\T212_T450_VerifyCanonicalOrderingOfSortFilterAttributes\T450_VerifyCanonicalOrderingOfSortFilterAttributes.cs" />
+    <Compile Include="Common\Sort\T217_T451_VerifyH1Tag\T217_VerifyH1Tag.cs" />
+    <Compile Include="Common\Sort\T217_T451_VerifyH1Tag\T451_VerifyH1Tag.cs" />
+    <Compile Include="Common\Sort\T218_T452_VerifyOneHundredBadge\T218_VerifyOneHundredBadge.cs" />
+    <Compile Include="Common\Sort\T218_T452_VerifyOneHundredBadge\T452_VerifyOneHundredBadge.cs" />
+    <Compile Include="Common\Sort\T219_T453_VerifyPlaFunctionality\T219_VerifyPlaFunctionality.cs" />
+    <Compile Include="Common\Sort\T219_T453_VerifyPlaFunctionality\T453_VerifyPlaFunctionality.cs" />
+    <Compile Include="Common\Sort\T340_T531_VerifySortPagePathPositionInDb\T340_VerifySortPagePathPositionInDb.cs" />
+    <Compile Include="Common\Sort\T340_T531_VerifySortPagePathPositionInDb\T531_VerifySortPagePathPositionInDb.cs" />
+    <Compile Include="Common\Sort\T545_T559_VerifySortPageLoadsCorrectElements\T545_VerifySortPageLoadsCorrectElements.cs" />
+    <Compile Include="Common\Sort\T545_T559_VerifySortPageLoadsCorrectElements\T559_VerifySortPageLoadsCorrectElements.cs" />
+    <Compile Include="Common\Sort\T7765_T7766_VerifyTheUserCanSearchForOpenBoxItemsOnly.cs\T7765_VerifyTheUserCanSearchForOpenBoxItemsOnly.cs" />
+    <Compile Include="Common\Sort\T7765_T7766_VerifyTheUserCanSearchForOpenBoxItemsOnly.cs\T7766_VerifyTheUserCanSearchForOpenBoxItemsOnly.cs" />
+    <Compile Include="Common\Search\SearchTestsBaseDesktop.cs" />
+    <Compile Include="Common\Search\SearchTestsBaseMobile.cs" />
+    <Compile Include="Common\Search\T337_T529_VerifySearchPersistence\T337_VerifySearchPersistence.cs" />
+    <Compile Include="Common\Search\T337_T529_VerifySearchPersistence\T529_VerifySearchPersistence.cs" />
+    <Compile Include="Common\Sort\T7800_T7801_VerifyUserCanSearchForSaleItemsOnly\T7800_VerifyUserCanSearchForSaleItemsOnly.cs" />
+    <Compile Include="Common\Sort\T7800_T7801_VerifyUserCanSearchForSaleItemsOnly\T7801_VerifyUserCanSearchForSaleItemsOnly.cs" />
+    <Compile Include="Common\Shipping\T7865_T7671_VerifySignInFunctionOnShippingPage\T7671_VerifySignInFunctionalityOnShippingPage.cs" />
+    <Compile Include="Common\Shipping\T7865_T7671_VerifySignInFunctionOnShippingPage\T7865_VerifySignInFunctionalityOnShippingPage.cs" />
+    <Compile Include="DesktopTablet\CartOverview\T104_VerifyPosColumnIsVisibleWithTotalsForEachProduct\T104_VerifyPosColumnIsVisibleWithTotalsForEachProduct.cs" />
+    <Compile Include="Common\ChangeEmailPreferences\T288_T490_VerifyRedirectedExistingEmail\T288_VerifyUserRedirectedWhenUsingExistingEmail.cs" />
+    <Compile Include="Common\ChangeEmailPreferences\T288_T490_VerifyRedirectedExistingEmail\T490_VerifyUserRedirectedWhenUsingExistingEmail.cs" />
+    <Compile Include="Common\ManageAccount\T300_T500_VerifyLoginAfterPasswordChange\T300_VerifyLoginAfterPasswordChange.cs" />
+    <Compile Include="Common\ManageAccount\T300_T500_VerifyLoginAfterPasswordChange\T500_VerifyLoginAfterPasswordChange.cs" />
+    <Compile Include="Common\OrderConfirmation\T7586_T7587_VerifyThatAUserCanPurchaseAPhysicalGiftCard.cs" />
+    <Compile Include="Common\OrderHistory\T7646_T7647_VerifyOrderDetailsForOpenBoxOrder.cs" />
+    <Compile Include="DesktopTablet\CartOverview\T124_VerifyCorrectShippingDaysAndFreightChargesIsDisplayed\T124_VerifyCorrectShippingDaysAndFreightChargesIsDisplayed.cs" />
+    <Compile Include="DesktopTablet\CartOverview\T101_VerifyDiscountPriceFieldAndPercentDiscountFieldAreDisabled\T101_VerifyDiscountPriceFieldAndPercentDiscountFieldAreDisabled.cs" />
+    <Compile Include="DesktopTablet\CartOverview\T113_VerifyEmployeeNotAllowedToAddSku99999\T113_VerifyEmployeeNotAllowedToAddSku99999.cs" />
+    <Compile Include="DesktopTablet\CartOverview\T120_VerifyProductMarginUserEditLink\T120_Windows_VerifyProductMarginUserEditLink.cs" />
+    <Compile Include="DesktopTablet\CartOverview\T133_VerifyMoreInfoLinkDisplaysForStoreInSession\T133_VerifyMoreInfoLinkDisplaysForStoreInSession.cs" />
+    <Compile Include="DesktopTablet\CartOverview\T7762_VerifyCartLinkFunctionalityonCart\T7762_VerifyCartLinkFunctionalityOnCart.cs" />
+    <Compile Include="DesktopTablet\CartOverview\T119_VerifyNoPosColumnVisibleInTotalsForEachProduct\T119_VerifyNoPosColumnVisibleTotalsForEachProducts.cs" />
+    <Compile Include="DesktopTablet\CartOverview\T108_VerifyEmployeeCanDeleteCart\T108_VerifyEmployeeCanDeleteCart.cs" />
+    <Compile Include="DesktopTablet\AddingToCartAndWishList\T344_VerifyUserCanAddItemWishlist\T344_Windows_VerifyUserCanAddItemWishlist.cs" />
+    <Compile Include="DesktopTablet\CartOverview\T116_VerifyAPopUpIsDisplayedWhenAnEmployeeEntersAPriceBelowUmrp\T116_VerifyAPopUpIsDisplayedWhenAnEmployeeEntersAPriceBelowUmrp.cs" />
+    <Compile Include="DesktopTablet\CartOverview\T112_VerifyUserCanSuccessfullyEmailCart\T112_VerifyUserCanSuccessfullyEmailShoppingCart.cs" />
+    <Compile Include="DesktopTablet\CartOverview\T106_VerifyAnEmployeeCanEmailACartWithAllOptionsSelected\T106_VerifyAnEmployeeCanEmailACartWithAllOptionsSelected.cs" />
+    <Compile Include="DesktopTablet\CartOverview\T117_VerifyAnAuthorizationPopupDisplaysWhenESITriesToApplyDiscountLargerThanAllowed\T117_VerifyAnAuthorizationPopupDisplays.cs" />
+    <Compile Include="DesktopTablet\CartOverview\T123_VerifyShippingChangesPerQtyTest\T123_Windows_VerifyShippingChangesPerQtyTest.cs" />
+    <Compile Include="DesktopTablet\CartOverview\T130_VerifyCartShowsShippingInfoForMarshallIslandForStoreInSession\T130_VerifyCartShowsShippingInfoForMarshallIslandForStoreInSession.cs" />
+    <Compile Include="DesktopTablet\CartOverview\T125_VerifyExpeditedShippingDropdownIsNotAvailable\T125_VerifyExpeditedShippingDropdownIsNotAvailable.cs" />
+    <Compile Include="DesktopTablet\CartOverview\T118_VerifyDiscountGivenWhenEsiAppliesDiscountLessThanAllowed\T118_VerifyDiscountGivenWhenEsiAppliesDiscountLessThanAllowed.cs" />
+    <Compile Include="DesktopTablet\CartOverview\T114_VerifyProductPriceIsCalculatedCorrectlyWhenEnterADiscount\T114_VerifyProductPriceIsCalculatedCorrectlyWhenEnterADiscount.cs" />
+    <Compile Include="DesktopTablet\CartOverview\T122_VerifyRemoveLinkModifyTotalPrice\T122_VerifyRemoveLinkModifiesTotalPrice.cs" />
+    <Compile Include="DesktopTablet\CartOverview\T121_VerifyEmployeeWithoutProductMarginRoleCantSeeMarginInfo\T121_VerifyEmployeeWithoutProductMarginRoleCantSeeMarginInfo.cs" />
+    <Compile Include="DesktopTablet\CartOverview\T115_VerifyAnEmployeeCanApplyDiscount\T115_VerifyEmployeeCanApplyDiscount.cs" />
+    <Compile Include="DesktopTablet\CartOverview\T7736_VerifySaleEndsInCalloutOnCartOverviewPage\T7736_VerifySaleEndsInCalloutOnCartOverviewPage.cs" />
+    <Compile Include="DesktopTablet\ChangeEmailPreferences\T290_VerifyEmailPrePopulates\T290_VerifyEmailPrePopulates.cs" />
+    <Compile Include="DesktopTablet\HeaderFooter\T267_VerifyHeaderFooterLinksForStoreInSession\T267_VerifyHeaderFooterLinksForStoreInSession.cs" />
+    <Compile Include="DesktopTablet\HeaderFooter\T274_VerifySignedInUserDoesNotSeeEmailBox\T274_VerifySignedInUserDoesNotSeeEmailBox.cs" />
+    <Compile Include="DesktopTablet\HeaderFooter\T7079_VerifyHeaderFooterLinksForHospitality\T7079_VerifyHeaderFooterLinksForHospitality.cs" />
+    <Compile Include="DesktopTablet\HeaderFooter\T7856_VerifyHeaderLinksPointToCorrectUrls\T7856_VerifyHeaderLinksPointToCorrectUrls.cs" />
+    <Compile Include="DesktopTablet\HeaderFooter\T7859_VerifyHeadersOnLightingCatalogPage\T7859_VerifyHeadersOnLightingCatalogPage.cs" />
+    <Compile Include="DesktopTablet\Homepage\T7443_VerifyFreeShippingTextInWidgets\T7443_VerifyFreeShippingTextInWidget.cs" />
+    <Compile Include="DesktopTablet\Homepage\T7763_VerifyStickyHeaderAppearsOnHomepage\T7763_VerifyStickyHeaderAppearsOnHomepage.cs" />
+    <Compile Include="Common\OtherPages\T7776_T7780_VerifyResidentialProductOnRegularPriceEligibleSpecialMemberProsCompanyInSession.cs" />
+    <Compile Include="Common\OtherPages\T7775_T7779_VerifyResidentialProductOnClearance.cs" />
+    <Compile Include="Common\OtherPages\T7777_T7781_VerifyResidentialProductPricingBlock.cs" />
+    <Compile Include="DesktopTablet\OtherPages\T7778_VerifyPricingBlockValuesOnSfpAndPla.cs" />
+    <Compile Include="Common\Payment\T136_T7032_VerifyCanNotSubmitIntOrderUnderTwoHundredDollars\T136_VerifyVaildationsForPaymentFields.cs" />
+    <Compile Include="Common\ProductDetail\T7620_T7621_VerifyPricingBlockValuesOnPdp.cs" />
+    <Compile Include="Common\OtherPages\T7608_T7609_VerifyTheStoreLocatorQueryStringParameterForSFPPages.cs" />
+    <Compile Include="Common\ProductDetail\T7614_T7616_VerifyFunctionalityOfThumbnails.cs" />
+    <Compile Include="Common\ProductDetail\T7819_T7820_VerifyThatSpecificationsTablesDisplayedOnPDP.cs" />
+    <Compile Include="Common\ProductDetail\T7825_T7826_VerifyGoodToKnowSectionAndLabelOnPDP.cs" />
+    <Compile Include="Common\Sort\SortTestsBaseDesktop.cs" />
+    <Compile Include="Common\Sort\SortTestsBaseMobile.cs" />
+    <Compile Include="Common\ProductDetail\T7786_T7787_VerifyReplacementPartLink.cs" />
+    <Compile Include="Common\Sort\T198_T438_VerifySoldOutCallOutAfterAddingMaxQuantity\T198_VerifySoldOutCallOutAfterAddingMaxQuantity.cs" />
+    <Compile Include="Common\Sort\T198_T438_VerifySoldOutCallOutAfterAddingMaxQuantity\T438_VerifySoldOutCallOutAfterAddingMaxQuantity.cs" />
+    <Compile Include="DesktopTablet\OtherPages\T7753_VerifyThumbnailImagesPlaSfp.cs" />
+    <Compile Include="Common\OtherPages\T7769_T7803_VerifyFunctionalityOfStickyNavOnSfp\T7769_VerifyFunctionalityOfStickyNavOnSFP.cs" />
+    <Compile Include="DesktopTablet\Payment\T180_VerifyEditOrderLinkWorksCorrectly\T180_VerifyEditOrderLinkWorksCorrectly.cs" />
+    <Compile Include="DesktopTablet\Payment\T182_VerifyCheckOptionIsAvailable\T182_VerifyCheckOptionIsAvailable.cs" />
+    <Compile Include="DesktopTablet\Payment\T7941_VerifyErrorMessageIntOrderUnderTwoHundredDollars\T7941_VerifyErrorMessageIntOrderUnderTwoHundredDollars.cs" />
+    <Compile Include="DesktopTablet\RoomViewer\T725_VerifyCustomerCreateRoomWithSkusAndAddToWishlistAndCart\T725_VerifyCustomerCreateRoomWithSkusAndAddToWishlistAndCart.cs" />
+    <Compile Include="DesktopTablet\RoomViewer\T7860_VerifyCustomerCanCreateSampleRoomForTwoSkus\T7860_VerifyCustomerCanCreateSampleRoomForTwoSkus.cs" />
+    <Compile Include="DesktopTablet\RoomViewer\T7878_VerifyCustomerCanManipulateEmailShareAndPrintOptionsInRoomViewerPage\T7878_VerifyCustomerCanManipulateEmailShareAndPrintOptionsInRoomViewerPage.cs" />
+    <Compile Include="DesktopTablet\RoomViewer\T7876_VerifyUserCanManipulateRoomNameInRoomViewerPage\T7876_VerifyUserCanManipulateRoomNameInRoomViewerPage.cs" />
+    <Compile Include="DesktopTablet\RoomViewer\T7879_VerifyCustomerCanOpenSavedRoomAndDuplicateRoom\T7879_VerifyCustomerCanOpenSavedRoomAndDuplicateRoom.cs" />
+    <Compile Include="Common\RoomViewer\T7877_T7884_VerifyUserCanManipulateRoomPhoto\T7877_VerifyUserCanManipulateRoomPhoto.cs" />
+    <Compile Include="DesktopTablet\RoomViewer\T7875_VerifyUserCanManipulateImageInRoomViewer\T7875_VerifyUserCanManipulateImageInRoomViewer.cs" />
+    <Compile Include="Common\Shipping\T7976_T7977_VerifyTaxLabelChangesFromEstimatedTaxtoTax\T7976_VerifyTaxLabelChangesfromEstimatedTaxtoTax.cs" />
+    <Compile Include="DesktopTablet\Search\T8009_VerifySearchBoxAndTextPersistThroughoutPage\T8009_VerifySearchBoxAndTextPersistThroughoutPage.cs" />
+    <Compile Include="DesktopTablet\SignIn\T7903_VerifyRememberMeAndKeepMeLoggedInForFutureVisitsCheckbox\T7903_VerifyRememberMeAndKeepMeLoggedInForFutureVisitsCheckbox .cs" />
+    <Compile Include="DesktopTablet\Sort\T210_VerifyFreeShippingFreeReturnCallOut\T210_VerifyFreeShippingFreeReturnCallOut.cs" />
+    <Compile Include="DesktopTablet\Sort\T206_VerifyCallout16PlusColorsDisplays\T206_VerifyCallout16PlusColorsDisplays.cs" />
+    <Compile Include="DesktopTablet\Sort\T209_VerifyFreeShippingCallOut\T209_VerifyFreeShippingCallOut.cs" />
+    <Compile Include="DesktopTablet\Sort\T213_VerifyCustomPriceRange\T213_VerifyCustomPriceRange.cs" />
+    <Compile Include="DesktopTablet\Sort\T207_VerifyMoreOptionsCallOut\T207_VerifyMoreOptionsCallOut.cs" />
+    <Compile Include="DesktopTablet\Sort\T7745_VerifyPresenceOfLampsPlusChoiceCalloutOnSortPage\T7745_VerifyPresenceOfLampsPlusChoiceCalloutOnSortPage.cs" />
+    <Compile Include="DesktopTablet\Sort\T7760_VerifyAvailableAtLocationCheckboxNotAvailable\T7760_VerifyAvailableAtLocationCheckboxNotAvailable.cs" />
+    <Compile Include="DesktopTablet\Sort\T7761_VerifyFunctionalityAvailableAtThisLocationCheckbox\T7761_VerifyFunctionalityAvailableAtThisLocationCheckbox.cs" />
+    <Compile Include="Mobile\AddingToCartAndWishList\T7978_VerifyUserCanAddItemToWishList.cs" />
+    <Compile Include="Mobile\CartOverview\T7755_VerifyOrderSummarySectionContainsCorrectInformation\T7755_VerifyOrderSummarySectionContainsCorrectInformation.cs" />
+    <Compile Include="Mobile\OtherPages\T7802_VerifyFunctionalityOfSfp4sOnSortPage.cs" />
+    <Compile Include="Mobile\Payment\T7956_VerifyErrorMessageForInternationalOrderUnder%24200OnPaymentPage\T7956_VerifyErrorMessageForInternationalOrderUnder%24200OnPaymentPage.cs" />
+    <Compile Include="Mobile\RoomViewer\T7851_VerifyACustomerCanCreate3DRoom\T7851_VerifyACustomerCanCreate3DRoom.cs" />
+    <Compile Include="Mobile\RoomViewer\T7886_VerifyUserCanManipulateOpenSavedRoomOption\T7886_VerifyUserCanManipulateOpenSavedRoomOption.cs" />
+    <Compile Include="Common\RoomViewer\T7877_T7884_VerifyUserCanManipulateRoomPhoto\T7884_VerifyUserCanManipulateRoomPhoto.cs" />
+    <Compile Include="Mobile\RoomViewer\T7939_VerifyAUserCanManipulateDuplicateRoomOptionsInRoomViewerPage\T7939_VerifyAUserCanManipulateDuplicateRoomOptionsInRoomViewerPage.cs" />
+    <Compile Include="Mobile\RoomViewer\T7883_VerifyUserCanManipulateImageInRoomViewer\T7883_VerifyUserCanManipulateImageInRoomViewer.cs" />
+    <Compile Include="Mobile\Search\T7869_VerifySearchBoxAndSearchTextPersistsThroughoutSearchResultPage.cs" />
+    <Compile Include="Unit\Mobile\iPadUnitTests.cs" />
+    <Compile Include="Unit\Mobile\iPhoneUnitTests.cs" />
+    <Compile Include="Unit\Users\UserActions.cs" />
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="app.Bamboo.config" />
+    <None Include="app.Mobile.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+    <Compile Include="Common\AddingToCartAndWishList\T7867_T7868_VerifyFunctionalityOfTheAddAllToCartOnTheWishList\T7867_VerifyFunctionalityOfTheAddAllToCartOnTheWishList.cs" />
+    <Compile Include="Common\AddingToCartAndWishList\T7867_T7868_VerifyFunctionalityOfTheAddAllToCartOnTheWishList\T7868_VerifyFunctionalityOfTheAddAllToCartOnTheWishList.cs" />
+    <Compile Include="Common\Certona\CertonaTestsBase.cs" />
+    <Compile Include="Common\Certona\T318_T513_VerifyCertonaSchemaForSortPage.cs" />
+    <Compile Include="Common\Certona\T319_T514_VerifyVerifyCertonaSchemaForPdp.cs" />
+    <Compile Include="Common\Certona\T324_T518_VerifyCertonaSchemeForFullPage.cs" />
+    <Compile Include="Common\ContactUs\ContactUsTestsBase.cs" />
+    <Compile Include="Common\OrderHistory\T282_T487_VerifySignedInConsumerCanViewOrderInformation.cs" />
+    <Compile Include="Common\OrderHistory\T283_T488_VerifyOrderStatusIsCorrectForOrder.cs" />
+    <Compile Include="Common\OrderHistory\T287_T489_VerifyInformationForOrderInOrderHistoryForLincOrder.cs" />
+    <Compile Include="Common\OtherPages\T7557_T7559_VerifyCalloutPhoneNumberEmailFiledFunctionality.cs" />
+    <Compile Include="Common\Pixels\NetworkLoggingTestsBase.cs" />
+    <Compile Include="Common\Pixels\T7465_T7466_VerifyDataCapturePixelAttributesCorrect.cs" />
+    <Compile Include="Common\ProductDetail\T7563_T7565_VerifyCalloutAndPhoneNumberToOrderOnPdp.cs" />
+    <Compile Include="Common\ProductDetail\T246_T468_VerifyLimitedQuantity.cs" />
+    <Compile Include="Common\ProductDetail\T247_T469_VerifySoldOutCallOut.cs" />
+    <Compile Include="Common\ProductDetail\T250_T472_VerifyFreeForOrdersOver49CallOut.cs" />
+    <Compile Include="Common\ProductDetail\T242_T466_VerifyQpInputOrLinkDoesNotShowForNonKioskMode.cs" />
+    <Compile Include="Common\ProductDetail\T248_T470_VerifyClearanceItemsSaveAmountDisplay.cs" />
+    <Compile Include="Common\ProductDetail\T6997_VerifySpecialPricingCalloutAppears.cs" />
+    <Compile Include="Common\ProductDetail\T256_T1600_VerifyShipInVerbiageIsCorrect.cs" />
+    <Compile Include="Common\ProductDetail\T547_T560_VerifyFormattingAndImagesLoadCorrectlyOnPDP.cs" />
+    <Compile Include="Common\ProductDetail\T6028_T6029_VerifyShipsToday2pmPacificVerbiageOnPDP.cs" />
+    <Compile Include="Common\ProductDetail\T261_T477_VerifyMarginLinkIsNotDisplayed.cs" />
+    <Compile Include="Common\ProductDetail\T263_T478_VerifyFanHasEnergyGuideIcon.cs" />
+    <Compile Include="Common\ProductDetail\T7356_T7357_VerifyStickyNavOnThePDP.cs" />
+    <Compile Include="DesktopTablet\Shipping\T7317_VerifyVerifyMultipleShippingAddressOnShippingPage.cs" />
+    <Compile Include="Common\ProductDetail\T249_T471_VerifyFreeShippingAndReturnCalloutOnPdp.cs" />
+    <Compile Include="Common\Shipping\ShippingTestBase.cs" />
+    <Compile Include="Common\Shipping\T169_T419_VerifyAUserCanSaveAShippingAddress.cs" />
+    <Compile Include="Common\Shipping\T170_T420_VerifyGoogleAutocomplete.cs" />
+    <Compile Include="Common\Shipping\T168_T418_VerifyFormUsesValidation.cs" />
+    <Compile Include="Common\ProductDetail\T224_T458_VerifyMultiProduct.cs" />
+    <Compile Include="Common\ProductDetail\T222_T456_VerifyFreeShippingAndReturns.cs" />
+    <Compile Include="Common\OtherPages\T7264_T7265_VerifyFunctionalityOfMoreLikeThisButton.cs" />
+    <Compile Include="Common\OrderConfirmation\T158_T7039_VerifyLincWidgetsOnOcPage.cs" />
+    <Compile Include="Common\OtherPages\T7056_T7057_VerifySortPagePathPositionIsRecordedInDb.cs" />
+    <Compile Include="Common\OrderConfirmation\T137_T7043_VerifyTheOCPageShowsTheCreateAnAccountSectionForAnonymousUsers.cs" />
+    <Compile Include="Common\Stores\T341_T532_VerifyStoresPagesUpdateCorrectly.cs" />
+    <Compile Include="Common\Sort\SortTestsBase.cs" />
+    <Compile Include="Common\Stores\T342_T533_VerifyCanGetDirectionsByAddress.cs" />
+    <Compile Include="Common\OrderConfirmation\T147_T7034_VerifyNoPromoCodeInCartAfterOrder .cs" />
+    <Compile Include="Common\OrderConfirmation\T556_T567_VerifyThatAUserCanEnterInANewPaymentTypeAtTheTimeOfCheckout.cs" />
+    <Compile Include="DesktopTablet\AddingToCartAndWishList\AddingToCartAndWishListTestsBase.cs" />
+    <Compile Include="DesktopTablet\ChangeEmailPreferences\T293_VerifyEmailUnsubscribingDisplaysThankYouMessage\T293_VerifyEmailUnsubscribingDisplaysThankYouMessage.cs" />
+    <Compile Include="DesktopTablet\CreateAccount\CreateAccountTestsBase.cs" />
+    <Compile Include="Common\Homepage\HomepageTestsBase.cs" />
+    <Compile Include="DesktopTablet\OtherPages\T197_VerifyPlaFunctionalityOnHomepage.cs" />
+    <Compile Include="DesktopTablet\OrderHistory\T280_VerifyAnEmployeeCanReturnToTheOrderHistoryPageByClickingOnBreadcrumbs.cs" />
+    <Compile Include="DesktopTablet\OrderHistory\T281_VerifyOrderInformationInOrderHistory.cs" />
+    <Compile Include="DesktopTablet\OrderHistory\T285_VerifyMyOrdersLinkIsDisplayedOnEmployeeToolsPage.cs" />
+    <Compile Include="DesktopTablet\OrderHistory\T286_VerifyPayPalOrderForRegularCustomerServiceRegularLoginAccount.cs" />
+    <Compile Include="DesktopTablet\OrderSummaryBlock\OrderSummaryBlockTestsBase.cs" />
+    <Compile Include="DesktopTablet\OrderSummaryBlock\T160_VerifyOrderSummaryBlockDiscountsBaseOnCartPageTests.cs" />
+    <Compile Include="DesktopTablet\ProductDetail\T243_VerifyQpElementsShowsInKiosk.cs" />
+    <Compile Include="DesktopTablet\ProductDetail\T244_VerifyQpLinkShowsForEmployeesInKioskMode.cs" />
+    <Compile Include="DesktopTablet\ProductDetail\T257_VerifyCheckStoreAvailabilityLinkNotShownTests.cs" />
+    <Compile Include="DesktopTablet\ProductDetail\T259_VerifyInventorySkuDisplayedForEsiAndSis.cs" />
+    <Compile Include="DesktopTablet\ProductDetail\T260_VerifyTheShowMarginFeatureIsAvailableForEmployees.cs" />
+    <Compile Include="Common\Search\SearchTestsBase.cs" />
+    <Compile Include="DesktopTablet\ProductDetail\T7457_VerifyBrandLogoAndShopAllBrandLinksOnPdp.cs" />
+    <Compile Include="DesktopTablet\SignIn\SignInTestsBase.cs" />
+    <Compile Include="DesktopTablet\Shipping\ShippingTestsBase.cs" />
+    <Compile Include="DesktopTablet\CartOverview\CartOverviewTestsBase.cs" />
+    <Compile Include="DesktopTablet\CartOverview\T103_VerifyOnlyShipItemPricesOnOrderSummary\T103_VerifyOnlyShipItemPricesOnOrderSummary.cs" />
+    <Compile Include="DesktopTablet\CartOverview\T128_VerifyEmployeeCanHaveCartTotalLessThan10Dollars\T128_VerifyEmployeeCanHaveCartTotalLessThan10Dollars.cs" />
+    <Compile Include="DesktopTablet\Sort\SortTestsBase.cs" />
+    <Compile Include="Common\OrderConfirmation\T148_T7044_VerifyConsumerCanPlaceInternationalOrderUsingSavedShippingAddress.cs" />
+    <Compile Include="DesktopTablet\Stores\StoresTestsBase.cs" />
+    <Compile Include="DesktopTablet\OrderConfirmation\T139_VerifyOrderForStorePickUpAndStoreInventoryWithWireTransfer.cs" />
+    <Compile Include="DesktopTablet\OrderConfirmation\T134_VerifyThatItemLevelDiscountAndHoldMsg.cs" />
+    <Compile Include="DesktopTablet\OrderConfirmation\OrderConfirmationTestsBase.cs" />
+    <Compile Include="DesktopTablet\OrderHistory\OrderHistoryTestsBase.cs" />
+    <Compile Include="DesktopTablet\ProductDetail\ProductDetailTestsBase.cs" />
+    <Compile Include="Common\ProductDetail\T223_T457_VerifyRelatedItemRedirect.cs" />
+    <Compile Include="Common\ProductDetail\T226_T460_VerifyColorPlusItem.cs" />
+    <Compile Include="DesktopTablet\ProductDetail\T227_VerifyItemQualifiesAsMcpItem.cs" />
+    <Compile Include="DesktopTablet\ProductDetail\T234_VerifyHousingOptionItemQualification.cs" />
+    <Compile Include="DesktopTablet\ProductDetail\T239_VerifyChatOptionAvailability.cs" />
+    <Compile Include="DesktopTablet\ProductDetail\T241_VerifyEmailProduct.cs" />
+    <Compile Include="Common\OrderConfirmation\T155_T7041_VerifySubmitOrderWithCCNavigateToOCPageLogout.cs" />
+    <Compile Include="Common\OrderConfirmation\T338_T7046_VerifySubmittedOrderEmailAndPaymentInfo.cs" />
+    <Compile Include="Integration\Mobile\SeleniumGridPoc.cs" />
+    <Compile Include="Integration\Mobile\LampsPlusMobileDriverTests.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="DesktopTablet\SignIn\T297_VerifyFunctionalityOfKeepMeLoggedInCheckBox.cs" />
+    <Compile Include="Common\CartOverview\T107_T392_VerifyOrderTotal\T107_VerifyOrderTotal.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="$(SolutionDir)\LampsPlus.AutomationFramework\LampsPlus.AutomationFramework.csproj">
+      <Project>{71a023e9-6b3f-45ef-aba6-5abac8bfcc64}</Project>
+      <Name>LampsPlus.AutomationFramework</Name>
+    </ProjectReference>
+    <ProjectReference Include="$(SolutionDir)\Automation.Framework\Automation.Framework.csproj">
+      <Project>{97b3599f-0e11-4d64-b0e7-4ec88285679a}</Project>
+      <Name>Automation.Framework</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Analyzer Include="..\packages\xunit.analyzers.1.0.0\analyzers\dotnet\cs\xunit.analyzers.fixes.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Mobile\ProductDetail\" />
+    <Folder Include="Mobile\Sort\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\packages\Selenium.WebDriver.IEDriver.3.12.0\build\Selenium.WebDriver.IEDriver.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\packages\Selenium.WebDriver.IEDriver.3.12.0\build\Selenium.WebDriver.IEDriver.targets'))" />
+    <Error Condition="!Exists('$(SolutionDir)\packages\Selenium.WebDriver.IEDriver.3.141.0\build\Selenium.WebDriver.IEDriver.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\packages\Selenium.WebDriver.IEDriver.3.141.0\build\Selenium.WebDriver.IEDriver.targets'))" />
+    <Error Condition="!Exists('..\packages\xunit.runner.console.2.4.2\build\xunit.runner.console.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\xunit.runner.console.2.4.2\build\xunit.runner.console.props'))" />
+    <Error Condition="!Exists('..\packages\xunit.core.2.4.2\build\xunit.core.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\xunit.core.2.4.2\build\xunit.core.props'))" />
+    <Error Condition="!Exists('..\packages\xunit.core.2.4.2\build\xunit.core.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\xunit.core.2.4.2\build\xunit.core.targets'))" />
+    <Error Condition="!Exists('..\packages\xunit.runner.visualstudio.2.4.5\build\net462\xunit.runner.visualstudio.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\xunit.runner.visualstudio.2.4.5\build\net462\xunit.runner.visualstudio.props'))" />
+    <Error Condition="!Exists('..\packages\Selenium.WebDriver.ChromeDriver.119.0.6045.10500\build\Selenium.WebDriver.ChromeDriver.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Selenium.WebDriver.ChromeDriver.119.0.6045.10500\build\Selenium.WebDriver.ChromeDriver.targets'))" />
+  </Target>
+  <Import Project="$(SolutionDir)\packages\Selenium.WebDriver.IEDriver.3.12.0\build\Selenium.WebDriver.IEDriver.targets" Condition="Exists('$(SolutionDir)\packages\Selenium.WebDriver.IEDriver.3.12.0\build\Selenium.WebDriver.IEDriver.targets')" />
+  <Import Project="$(SolutionDir)\packages\Selenium.WebDriver.IEDriver.3.141.0\build\Selenium.WebDriver.IEDriver.targets" Condition="Exists('$(SolutionDir)\packages\Selenium.WebDriver.IEDriver.3.141.0\build\Selenium.WebDriver.IEDriver.targets')" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\WebApplications\Microsoft.WebApplication.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\WebApplications\Microsoft.WebApplication.targets')" />
+  <UsingTask TaskName="ReplaceFileText" TaskFactory="CodeTaskFactory" AssemblyFile="$(MSBuildToolsPath)\Microsoft.Build.Tasks.v4.0.dll">
+    <ParameterGroup>
+      <InputFilename ParameterType="System.String" Required="true" />
+      <OutputFilename ParameterType="System.String" Required="true" />
+      <MatchExpression ParameterType="System.String" Required="true" />
+      <ReplacementText ParameterType="System.String" Required="true" />
+    </ParameterGroup>
+    <Task>
+      <Reference Include="System.Core" />
+      <Using Namespace="System" />
+      <Using Namespace="System.IO" />
+      <Using Namespace="System.Text.RegularExpressions" />
+      <Code Type="Fragment" Language="cs"><![CDATA[
+			File.WriteAllText(
+				OutputFilename,
+				Regex.Replace(File.ReadAllText(InputFilename), MatchExpression, ReplacementText)
+				);
+		  ]]></Code>
+    </Task>
+  </UsingTask>
+  <Target Name="ApplyBambooJobNumber" AfterTargets="EnsureNuGetPackageBuildImports" Condition="'$(bamboo_planName)' != '' ">
+    <ReplaceFileText InputFilename="$(bamboo_build_working_directory)\LampsPlus.RegressionTests\app.config" OutputFilename="$(bamboo_build_working_directory)\LampsPlus.RegressionTests\app.config" MatchExpression="{BambooJobNumber}" ReplacementText="$(bamboo_buildNumber)" />
+  </Target>
+  <Target Name="ApplyMobileSettings" AfterTargets="ApplyBambooJobNumber" Condition="'$(bamboo_DesignatedProxyHost)' != '' ">
+    <ReplaceFileText InputFilename="app.Mobile.config" OutputFilename="app.Mobile.config" MatchExpression="{DesignatedProxyHost}" ReplacementText="$(DesignatedProxyHost)" />
+    <ReplaceFileText InputFilename="app.Mobile.config" OutputFilename="app.Mobile.config" MatchExpression="{DesignatedProxyPort}" ReplacementText="$(DesignatedProxyPort)" />
+  </Target>
+  <Target Name="MobileAppConfigTransformation" AfterTargets="ApplyMobileSettings" Condition="'$(bamboo_DesignatedProxyHost)' != '' ">
+    <TransformXml Source="app.config" Transform="app.Mobile.config" Destination="app.config" />
+  </Target>
+  <Target Name="ApplyIphoneSettings" BeforeTargets="Build" Condition="'$(bamboo_IphoneDailyBuild)' != '' ">
+    <ReplaceFileText InputFilename="app.Bamboo.config" OutputFilename="app.Bamboo.config" MatchExpression="{IphoneDailyBuild}" ReplacementText="$(IphoneDailyBuild)" />
+  </Target>
+  <Target Name="ApplyBambooSettings" BeforeTargets="Build" Condition="'$(bamboo_planName)' != '' ">
+    <ReplaceFileText InputFilename="app.Bamboo.config" OutputFilename="app.Bamboo.config" MatchExpression="{TargetInstance}" ReplacementText="$(TargetInstance)" />
+    <ReplaceFileText InputFilename="app.Bamboo.config" OutputFilename="app.Bamboo.config" MatchExpression="{MobileGridCloud}" ReplacementText="$(MobileGridCloud)" />
+    <ReplaceFileText InputFilename="app.Bamboo.config" OutputFilename="app.Bamboo.config" MatchExpression="{SauceLabsBambooUserName}" ReplacementText="$(SauceLabsBambooUserName)" />
+    <ReplaceFileText InputFilename="app.Bamboo.config" OutputFilename="app.Bamboo.config" MatchExpression="{SauceLabsBambooAccessKey}" ReplacementText="$(SauceLabsBambooAccessKey)" />
+  </Target>
+  <Target Name="AppConfigTransformation" BeforeTargets="Build" Condition="'$(bamboo_planName)' != '' ">
+    <TransformXml Source="App.config" Transform="app.Bamboo.config" Destination="App.config" />
+  </Target>
+  <Target Name="AppConfigCopy" AfterTargets="AppConfigTransformation" Condition="'$(bamboo_planName)' != '' ">
+    <Copy SourceFiles="App.config" DestinationFiles="$(OutputPath)$(TargetFileName).config" />
+  </Target>
+  <Import Project="..\packages\xunit.core.2.4.2\build\xunit.core.targets" Condition="Exists('..\packages\xunit.core.2.4.2\build\xunit.core.targets')" />
+  <Import Project="..\packages\Selenium.WebDriver.ChromeDriver.119.0.6045.10500\build\Selenium.WebDriver.ChromeDriver.targets" Condition="Exists('..\packages\Selenium.WebDriver.ChromeDriver.119.0.6045.10500\build\Selenium.WebDriver.ChromeDriver.targets')" />
+</Project>

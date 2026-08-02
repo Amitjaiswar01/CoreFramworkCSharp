@@ -1,0 +1,28 @@
+# Compiled Object folders
+bin
+obj
+packages
+sqlite3
+TestResults
+
+# Other
+UpgradeLog*
+*.orig
+*.tmp
+
+# User files
+*.suo
+*.user
+*.vs
+.gitattributes
+
+\.vs/config/applicationhost\.config
+
+# Script files
+*.txt
+!/Automation.TestClassGenerator/AutomationTestTemplate.txt
+
+#Documentation
+TestAutomationDocumentation/Help
+TestAutomationDocumentation/LampsPlusTestAutomation
+/_ReSharper.Caches/ReSharperPlatformVs15192_9f098338.Lamps Plus Web Tests.00

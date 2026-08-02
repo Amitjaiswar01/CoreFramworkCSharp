@@ -1,0 +1,1413 @@
+{
+	"info": {
+		"_postman_id": "4d539838-4abd-4728-a71c-e34a6cee2e55",
+		"name": "Proxy Setup",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Proxy A",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://{{ProxyIp}}:{{ProxyPort}}/proxy?port=8082",
+					"protocol": "http",
+					"host": [
+						"{{ProxyIp}}"
+					],
+					"port": "{{ProxyPort}}",
+					"path": [
+						"proxy"
+					],
+					"query": [
+						{
+							"key": "port",
+							"value": "8082"
+						}
+					]
+				},
+				"description": "http://localhost:8080/proxy"
+			},
+			"response": []
+		},
+		{
+			"name": "Create Proxy B",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://{{ProxyIp}}:{{ProxyPort}}/proxy?port=8083",
+					"protocol": "http",
+					"host": [
+						"{{ProxyIp}}"
+					],
+					"port": "{{ProxyPort}}",
+					"path": [
+						"proxy"
+					],
+					"query": [
+						{
+							"key": "port",
+							"value": "8083"
+						}
+					]
+				},
+				"description": "http://localhost:8080/proxy"
+			},
+			"response": []
+		},
+		{
+			"name": "Create Proxy C",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://{{ProxyIp}}:{{ProxyPort}}/proxy?port=8084",
+					"protocol": "http",
+					"host": [
+						"{{ProxyIp}}"
+					],
+					"port": "{{ProxyPort}}",
+					"path": [
+						"proxy"
+					],
+					"query": [
+						{
+							"key": "port",
+							"value": "8084"
+						}
+					]
+				},
+				"description": "http://localhost:8080/proxy"
+			},
+			"response": []
+		},
+		{
+			"name": "Create Proxy D",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://{{ProxyIp}}:{{ProxyPort}}/proxy?port=8085",
+					"protocol": "http",
+					"host": [
+						"{{ProxyIp}}"
+					],
+					"port": "{{ProxyPort}}",
+					"path": [
+						"proxy"
+					],
+					"query": [
+						{
+							"key": "port",
+							"value": "8085"
+						}
+					]
+				},
+				"description": "http://localhost:8080/proxy"
+			},
+			"response": []
+		},
+		{
+			"name": "Create Proxy E",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://{{ProxyIp}}:{{ProxyPort}}/proxy?port=8086",
+					"protocol": "http",
+					"host": [
+						"{{ProxyIp}}"
+					],
+					"port": "{{ProxyPort}}",
+					"path": [
+						"proxy"
+					],
+					"query": [
+						{
+							"key": "port",
+							"value": "8086"
+						}
+					]
+				},
+				"description": "http://localhost:8080/proxy"
+			},
+			"response": []
+		},
+		{
+			"name": "Create Proxy F",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://{{ProxyIp}}:{{ProxyPort}}/proxy?port=8087",
+					"protocol": "http",
+					"host": [
+						"{{ProxyIp}}"
+					],
+					"port": "{{ProxyPort}}",
+					"path": [
+						"proxy"
+					],
+					"query": [
+						{
+							"key": "port",
+							"value": "8087"
+						}
+					]
+				},
+				"description": "http://localhost:8080/proxy"
+			},
+			"response": []
+		},
+		{
+			"name": "Create Proxy G",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://{{ProxyIp}}:{{ProxyPort}}/proxy?port=8088",
+					"protocol": "http",
+					"host": [
+						"{{ProxyIp}}"
+					],
+					"port": "{{ProxyPort}}",
+					"path": [
+						"proxy"
+					],
+					"query": [
+						{
+							"key": "port",
+							"value": "8088"
+						}
+					]
+				},
+				"description": "http://localhost:8080/proxy"
+			},
+			"response": []
+		},
+		{
+			"name": "Create Proxy H",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://{{ProxyIp}}:{{ProxyPort}}/proxy?port=8089",
+					"protocol": "http",
+					"host": [
+						"{{ProxyIp}}"
+					],
+					"port": "{{ProxyPort}}",
+					"path": [
+						"proxy"
+					],
+					"query": [
+						{
+							"key": "port",
+							"value": "8089"
+						}
+					]
+				},
+				"description": "http://localhost:8080/proxy"
+			},
+			"response": []
+		},
+		{
+			"name": "Create Proxy I",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://{{ProxyIp}}:{{ProxyPort}}/proxy?port=8090",
+					"protocol": "http",
+					"host": [
+						"{{ProxyIp}}"
+					],
+					"port": "{{ProxyPort}}",
+					"path": [
+						"proxy"
+					],
+					"query": [
+						{
+							"key": "port",
+							"value": "8090"
+						}
+					]
+				},
+				"description": "http://localhost:8080/proxy"
+			},
+			"response": []
+		},
+		{
+			"name": "Create Proxy A_Har",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://{{ProxyIp}}:{{ProxyPort}}/proxy?port=8091",
+					"protocol": "http",
+					"host": [
+						"{{ProxyIp}}"
+					],
+					"port": "{{ProxyPort}}",
+					"path": [
+						"proxy"
+					],
+					"query": [
+						{
+							"key": "port",
+							"value": "8091"
+						}
+					]
+				},
+				"description": "http://localhost:8080/proxy"
+			},
+			"response": []
+		},
+		{
+			"name": "Create Proxy B_Har",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://{{ProxyIp}}:{{ProxyPort}}/proxy?port=8092",
+					"protocol": "http",
+					"host": [
+						"{{ProxyIp}}"
+					],
+					"port": "{{ProxyPort}}",
+					"path": [
+						"proxy"
+					],
+					"query": [
+						{
+							"key": "port",
+							"value": "8092"
+						}
+					]
+				},
+				"description": "http://localhost:8080/proxy"
+			},
+			"response": []
+		},
+		{
+			"name": "Create Proxy C_Har",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://{{ProxyIp}}:{{ProxyPort}}/proxy?port=8093",
+					"protocol": "http",
+					"host": [
+						"{{ProxyIp}}"
+					],
+					"port": "{{ProxyPort}}",
+					"path": [
+						"proxy"
+					],
+					"query": [
+						{
+							"key": "port",
+							"value": "8093"
+						}
+					]
+				},
+				"description": "http://localhost:8080/proxy"
+			},
+			"response": []
+		},
+		{
+			"name": "Create Proxy D_Har",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://{{ProxyIp}}:{{ProxyPort}}/proxy?port=8094",
+					"protocol": "http",
+					"host": [
+						"{{ProxyIp}}"
+					],
+					"port": "{{ProxyPort}}",
+					"path": [
+						"proxy"
+					],
+					"query": [
+						{
+							"key": "port",
+							"value": "8094"
+						}
+					]
+				},
+				"description": "http://localhost:8080/proxy"
+			},
+			"response": []
+		},
+		{
+			"name": "Create Proxy E_Har",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://{{ProxyIp}}:{{ProxyPort}}/proxy?port=8095",
+					"protocol": "http",
+					"host": [
+						"{{ProxyIp}}"
+					],
+					"port": "{{ProxyPort}}",
+					"path": [
+						"proxy"
+					],
+					"query": [
+						{
+							"key": "port",
+							"value": "8095"
+						}
+					]
+				},
+				"description": "http://localhost:8080/proxy"
+			},
+			"response": []
+		},
+		{
+			"name": "Create Proxy F_Har",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://{{ProxyIp}}:{{ProxyPort}}/proxy?port=8096",
+					"protocol": "http",
+					"host": [
+						"{{ProxyIp}}"
+					],
+					"port": "{{ProxyPort}}",
+					"path": [
+						"proxy"
+					],
+					"query": [
+						{
+							"key": "port",
+							"value": "8096"
+						}
+					]
+				},
+				"description": "http://localhost:8080/proxy"
+			},
+			"response": []
+		},
+		{
+			"name": "Create Proxy G_Har",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://{{ProxyIp}}:{{ProxyPort}}/proxy?port=8097",
+					"protocol": "http",
+					"host": [
+						"{{ProxyIp}}"
+					],
+					"port": "{{ProxyPort}}",
+					"path": [
+						"proxy"
+					],
+					"query": [
+						{
+							"key": "port",
+							"value": "8097"
+						}
+					]
+				},
+				"description": "http://localhost:8080/proxy"
+			},
+			"response": []
+		},
+		{
+			"name": "Create Proxy H_Har",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://{{ProxyIp}}:{{ProxyPort}}/proxy?port=8098",
+					"protocol": "http",
+					"host": [
+						"{{ProxyIp}}"
+					],
+					"port": "{{ProxyPort}}",
+					"path": [
+						"proxy"
+					],
+					"query": [
+						{
+							"key": "port",
+							"value": "8098"
+						}
+					]
+				},
+				"description": "http://localhost:8080/proxy"
+			},
+			"response": []
+		},
+		{
+			"name": "Create Proxy I_Har",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://{{ProxyIp}}:{{ProxyPort}}/proxy?port=8099",
+					"protocol": "http",
+					"host": [
+						"{{ProxyIp}}"
+					],
+					"port": "{{ProxyPort}}",
+					"path": [
+						"proxy"
+					],
+					"query": [
+						{
+							"key": "port",
+							"value": "8099"
+						}
+					]
+				},
+				"description": "http://localhost:8080/proxy"
+			},
+			"response": []
+		},
+		{
+			"name": "Override DNS A",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"www.lampsplus.com\":\"{{A}}\"}"
+				},
+				"url": {
+					"raw": "http://{{ProxyIp}}:{{ProxyPort}}/proxy/8082/hosts",
+					"protocol": "http",
+					"host": [
+						"{{ProxyIp}}"
+					],
+					"port": "{{ProxyPort}}",
+					"path": [
+						"proxy",
+						"8082",
+						"hosts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Override DNS B",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"www.lampsplus.com\":\"{{B}}\"}"
+				},
+				"url": {
+					"raw": "http://{{ProxyIp}}:{{ProxyPort}}/proxy/8083/hosts",
+					"protocol": "http",
+					"host": [
+						"{{ProxyIp}}"
+					],
+					"port": "{{ProxyPort}}",
+					"path": [
+						"proxy",
+						"8083",
+						"hosts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Override DNS C",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"www.lampsplus.com\":\"{{C}}\"}"
+				},
+				"url": {
+					"raw": "http://{{ProxyIp}}:{{ProxyPort}}/proxy/8084/hosts",
+					"protocol": "http",
+					"host": [
+						"{{ProxyIp}}"
+					],
+					"port": "{{ProxyPort}}",
+					"path": [
+						"proxy",
+						"8084",
+						"hosts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Override DNS D",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"www.lampsplus.com\":\"{{D}}\"}"
+				},
+				"url": {
+					"raw": "http://{{ProxyIp}}:{{ProxyPort}}/proxy/8085/hosts",
+					"protocol": "http",
+					"host": [
+						"{{ProxyIp}}"
+					],
+					"port": "{{ProxyPort}}",
+					"path": [
+						"proxy",
+						"8085",
+						"hosts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Override DNS E",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"www.lampsplus.com\":\"{{E}}\"}"
+				},
+				"url": {
+					"raw": "http://{{ProxyIp}}:{{ProxyPort}}/proxy/8086/hosts",
+					"protocol": "http",
+					"host": [
+						"{{ProxyIp}}"
+					],
+					"port": "{{ProxyPort}}",
+					"path": [
+						"proxy",
+						"8086",
+						"hosts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Override DNS F",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"www.lampsplus.com\":\"{{F}}\"}"
+				},
+				"url": {
+					"raw": "http://{{ProxyIp}}:{{ProxyPort}}/proxy/8087/hosts",
+					"protocol": "http",
+					"host": [
+						"{{ProxyIp}}"
+					],
+					"port": "{{ProxyPort}}",
+					"path": [
+						"proxy",
+						"8087",
+						"hosts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Override DNS G",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"www.lampsplus.com\":\"{{G}}\"}"
+				},
+				"url": {
+					"raw": "http://{{ProxyIp}}:{{ProxyPort}}/proxy/8088/hosts",
+					"protocol": "http",
+					"host": [
+						"{{ProxyIp}}"
+					],
+					"port": "{{ProxyPort}}",
+					"path": [
+						"proxy",
+						"8088",
+						"hosts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Override DNS H",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"www.lampsplus.com\":\"{{H}}\"}"
+				},
+				"url": {
+					"raw": "http://{{ProxyIp}}:{{ProxyPort}}/proxy/8089/hosts",
+					"protocol": "http",
+					"host": [
+						"{{ProxyIp}}"
+					],
+					"port": "{{ProxyPort}}",
+					"path": [
+						"proxy",
+						"8089",
+						"hosts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Override DNS I",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"www.lampsplus.com\":\"{{I}}\"}"
+				},
+				"url": {
+					"raw": "http://{{ProxyIp}}:{{ProxyPort}}/proxy/8090/hosts",
+					"protocol": "http",
+					"host": [
+						"{{ProxyIp}}"
+					],
+					"port": "{{ProxyPort}}",
+					"path": [
+						"proxy",
+						"8090",
+						"hosts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Override DNS A_Har",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"www.lampsplus.com\":\"{{A}}\"}"
+				},
+				"url": {
+					"raw": "http://{{ProxyIp}}:{{ProxyPort}}/proxy/8091/hosts",
+					"protocol": "http",
+					"host": [
+						"{{ProxyIp}}"
+					],
+					"port": "{{ProxyPort}}",
+					"path": [
+						"proxy",
+						"8091",
+						"hosts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Override DNS B_Har",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"www.lampsplus.com\":\"{{B}}\"}"
+				},
+				"url": {
+					"raw": "http://{{ProxyIp}}:{{ProxyPort}}/proxy/8092/hosts",
+					"protocol": "http",
+					"host": [
+						"{{ProxyIp}}"
+					],
+					"port": "{{ProxyPort}}",
+					"path": [
+						"proxy",
+						"8092",
+						"hosts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Override DNS C_Har",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"www.lampsplus.com\":\"{{C}}\"}"
+				},
+				"url": {
+					"raw": "http://{{ProxyIp}}:{{ProxyPort}}/proxy/8093/hosts",
+					"protocol": "http",
+					"host": [
+						"{{ProxyIp}}"
+					],
+					"port": "{{ProxyPort}}",
+					"path": [
+						"proxy",
+						"8093",
+						"hosts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Override DNS D_Har",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"www.lampsplus.com\":\"{{D}}\"}"
+				},
+				"url": {
+					"raw": "http://{{ProxyIp}}:{{ProxyPort}}/proxy/8094/hosts",
+					"protocol": "http",
+					"host": [
+						"{{ProxyIp}}"
+					],
+					"port": "{{ProxyPort}}",
+					"path": [
+						"proxy",
+						"8094",
+						"hosts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Override DNS E_Har",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"www.lampsplus.com\":\"{{E}}\"}"
+				},
+				"url": {
+					"raw": "http://{{ProxyIp}}:{{ProxyPort}}/proxy/8095/hosts",
+					"protocol": "http",
+					"host": [
+						"{{ProxyIp}}"
+					],
+					"port": "{{ProxyPort}}",
+					"path": [
+						"proxy",
+						"8095",
+						"hosts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Override DNS F_Har",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"www.lampsplus.com\":\"{{F}}\"}"
+				},
+				"url": {
+					"raw": "http://{{ProxyIp}}:{{ProxyPort}}/proxy/8096/hosts",
+					"protocol": "http",
+					"host": [
+						"{{ProxyIp}}"
+					],
+					"port": "{{ProxyPort}}",
+					"path": [
+						"proxy",
+						"8096",
+						"hosts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Override DNS G_Har",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"www.lampsplus.com\":\"{{G}}\"}"
+				},
+				"url": {
+					"raw": "http://{{ProxyIp}}:{{ProxyPort}}/proxy/8097/hosts",
+					"protocol": "http",
+					"host": [
+						"{{ProxyIp}}"
+					],
+					"port": "{{ProxyPort}}",
+					"path": [
+						"proxy",
+						"8097",
+						"hosts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Override DNS H_Har",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"www.lampsplus.com\":\"{{H}}\"}"
+				},
+				"url": {
+					"raw": "http://{{ProxyIp}}:{{ProxyPort}}/proxy/8098/hosts",
+					"protocol": "http",
+					"host": [
+						"{{ProxyIp}}"
+					],
+					"port": "{{ProxyPort}}",
+					"path": [
+						"proxy",
+						"8098",
+						"hosts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Override DNS I_Har",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"www.lampsplus.com\":\"{{I}}\"}"
+				},
+				"url": {
+					"raw": "http://{{ProxyIp}}:{{ProxyPort}}/proxy/8099/hosts",
+					"protocol": "http",
+					"host": [
+						"{{ProxyIp}}"
+					],
+					"port": "{{ProxyPort}}",
+					"path": [
+						"proxy",
+						"8099",
+						"hosts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create HAR on A_Har",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://{{ProxyIp}}:{{ProxyPort}}/proxy/8091/har",
+					"protocol": "http",
+					"host": [
+						"{{ProxyIp}}"
+					],
+					"port": "{{ProxyPort}}",
+					"path": [
+						"proxy",
+						"8091",
+						"har"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create HAR on B_Har",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://{{ProxyIp}}:{{ProxyPort}}/proxy/8092/har",
+					"protocol": "http",
+					"host": [
+						"{{ProxyIp}}"
+					],
+					"port": "{{ProxyPort}}",
+					"path": [
+						"proxy",
+						"8092",
+						"har"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create HAR on C_Har",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://{{ProxyIp}}:{{ProxyPort}}/proxy/8093/har",
+					"protocol": "http",
+					"host": [
+						"{{ProxyIp}}"
+					],
+					"port": "{{ProxyPort}}",
+					"path": [
+						"proxy",
+						"8093",
+						"har"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create HAR on D_Har",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://{{ProxyIp}}:{{ProxyPort}}/proxy/8094/har",
+					"protocol": "http",
+					"host": [
+						"{{ProxyIp}}"
+					],
+					"port": "{{ProxyPort}}",
+					"path": [
+						"proxy",
+						"8094",
+						"har"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create HAR on E_Har",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://{{ProxyIp}}:{{ProxyPort}}/proxy/8095/har",
+					"protocol": "http",
+					"host": [
+						"{{ProxyIp}}"
+					],
+					"port": "{{ProxyPort}}",
+					"path": [
+						"proxy",
+						"8095",
+						"har"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create HAR on F_Har",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://{{ProxyIp}}:{{ProxyPort}}/proxy/8096/har",
+					"protocol": "http",
+					"host": [
+						"{{ProxyIp}}"
+					],
+					"port": "{{ProxyPort}}",
+					"path": [
+						"proxy",
+						"8096",
+						"har"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create HAR on G_Har",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://{{ProxyIp}}:{{ProxyPort}}/proxy/8097/har",
+					"protocol": "http",
+					"host": [
+						"{{ProxyIp}}"
+					],
+					"port": "{{ProxyPort}}",
+					"path": [
+						"proxy",
+						"8097",
+						"har"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create HAR on H_Har",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://{{ProxyIp}}:{{ProxyPort}}/proxy/8098/har",
+					"protocol": "http",
+					"host": [
+						"{{ProxyIp}}"
+					],
+					"port": "{{ProxyPort}}",
+					"path": [
+						"proxy",
+						"8098",
+						"har"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create HAR on I_Har",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://{{ProxyIp}}:{{ProxyPort}}/proxy/8099/har",
+					"protocol": "http",
+					"host": [
+						"{{ProxyIp}}"
+					],
+					"port": "{{ProxyPort}}",
+					"path": [
+						"proxy",
+						"8099",
+						"har"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

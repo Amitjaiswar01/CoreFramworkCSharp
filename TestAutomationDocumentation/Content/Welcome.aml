@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<topic id="9d703faf-ff27-4e8a-a95d-d96a942eb678" revisionNumber="1">
+	<developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<introduction>
+			<para>Lamps Plus Test Automation provides functional UI testing of the Lamps Plus websit with the help of Selenium Webdriver.</para>
+		</introduction>
+		<section>
+			<title>Getting Started</title>
+			<content>
+				<para>Lamps Plus Test Automation project information</para>
+				<para>
+				    <externalLink>
+			            <linkText>Test Automation JIRA Kanban board</linkText>
+			    	    <linkUri>https://lampstrack.lampsplus.com:8443/secure/RapidBoard.jspa?rapidView=215</linkUri>
+			    	</externalLink>
+			    </para>
+				<para>
+					<externalLink>
+				    	<linkText>Bitbucket Source Code Repository</linkText>
+				    	<linkUri>https://bitbucket.lampsplus.com:8443/projects/LAMPS/repos/test-automation/browse</linkUri>
+			    	</externalLink>
+			    </para>
+				<para>
+				    <externalLink>
+				    	<linkText>Test Automation Confluence Space</linkText>
+				    	<linkUri>https://confluence.lampsplus.com:8093/display/TA/Test+Automation</linkUri>
+			    	</externalLink>
+			    </para>
+			    <para>The following applciations must be installed to modify the project Compiled Help Module (CHM). They are located in the packages directory at the root of the local repository:</para>
+				<para>SHFBInstaller_v2018.5.29.0.zip</para>
+				<para>BuildTools_Full.exe</para>
+			</content>
+		</section>
+		<relatedTopics>
+			<link xlink:href="d1a360d9-aacd-488d-a14f-12d7ea2c8cc6" />
+		</relatedTopics>
+	</developerConceptualDocument>
+</topic>

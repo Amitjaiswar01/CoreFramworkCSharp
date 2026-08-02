@@ -1,0 +1,1057 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\xunit.runner.visualstudio.2.4.5\build\net462\xunit.runner.visualstudio.props" Condition="Exists('..\packages\xunit.runner.visualstudio.2.4.5\build\net462\xunit.runner.visualstudio.props')" />
+  <Import Project="..\packages\xunit.core.2.4.2\build\xunit.core.props" Condition="Exists('..\packages\xunit.core.2.4.2\build\xunit.core.props')" />
+  <Import Project="..\packages\xunit.runner.console.2.4.2\build\xunit.runner.console.props" Condition="Exists('..\packages\xunit.runner.console.2.4.2\build\xunit.runner.console.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{033ED73B-F987-45D6-B63C-2BB68F5CFAE1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <LangVersion>latest</LangVersion>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LampsPlus.AutomationFramework</RootNamespace>
+    <AssemblyName>LampsPlus.AutomationFramework</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DebugLocal|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\DebugLocal\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;DebugLocal</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreGeneratedCode>false</CodeAnalysisIgnoreGeneratedCode>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DebugGrid|AnyCPU'">
+    <OutputPath>bin\DebugGrid\</OutputPath>
+    <DefineConstants>DebugGrid</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'ReleaseLocal|AnyCPU'">
+    <OutputPath>bin\ReleaseLocal\</OutputPath>
+    <DefineConstants>ReleaseLocal</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <ErrorReport>prompt</ErrorReport>
+    <DebugType>none</DebugType>
+    <DebugSymbols>false</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'ReleaseGrid|AnyCPU'">
+    <OutputPath>bin\ReleaseGrid\</OutputPath>
+    <DefineConstants>ReleaseGrid</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <ErrorReport>prompt</ErrorReport>
+    <DebugType>none</DebugType>
+    <DebugSymbols>false</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AngleSharp, Version=1.0.4.0, Culture=neutral, PublicKeyToken=e83494dcdc6d31ea, processorArchitecture=MSIL">
+      <HintPath>..\packages\AngleSharp.1.0.4\lib\net461\AngleSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Appium.Net, Version=4.3.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Appium.WebDriver.4.3.1\lib\net45\Appium.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="BrotliSharpLib, Version=0.3.2.0, Culture=neutral, PublicKeyToken=3f4e2a1cd615fcb7, processorArchitecture=MSIL">
+      <HintPath>..\packages\BrotliSharpLib.0.3.3\lib\net451\BrotliSharpLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>$(SolutionDir)\packages\Castle.Core.4.3.1\lib\net45\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="CssParser, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Eyes.Selenium.3.26.0\lib\net461\CssParser.dll</HintPath>
+    </Reference>
+    <Reference Include="Eyes.Appium.DotNet, Version=5.20.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Eyes.Appium.5.20.0\lib\net461\Eyes.Appium.DotNet.dll</HintPath>
+    </Reference>
+    <Reference Include="Eyes.Sdk.Core.S3.DotNet, Version=3.19.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Eyes.Sdk.Core.S3.3.19.0\lib\net461\Eyes.Sdk.Core.S3.DotNet.dll</HintPath>
+    </Reference>
+    <Reference Include="Eyes.Sdk.Universal.Core.DotNet, Version=2.16.9.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Eyes.Sdk.Universal.Core.2.16.9\lib\net461\Eyes.Sdk.Universal.Core.DotNet.dll</HintPath>
+    </Reference>
+    <Reference Include="Eyes.Selenium.DotNet, Version=3.26.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Eyes.Selenium.3.26.0\lib\net461\Eyes.Selenium.DotNet.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis, Version=1.35.1.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>$(SolutionDir)\packages\Google.Apis.1.35.1\lib\net45\Google.Apis.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Auth, Version=1.35.1.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>$(SolutionDir)\packages\Google.Apis.Auth.1.35.1\lib\net45\Google.Apis.Auth.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Auth.PlatformServices, Version=1.35.1.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>$(SolutionDir)\packages\Google.Apis.Auth.1.35.1\lib\net45\Google.Apis.Auth.PlatformServices.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Core, Version=1.35.1.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>$(SolutionDir)\packages\Google.Apis.Core.1.35.1\lib\net45\Google.Apis.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Gmail.v1, Version=1.35.1.1300, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>$(SolutionDir)\packages\Google.Apis.Gmail.v1.1.35.1.1300\lib\net45\Google.Apis.Gmail.v1.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.PlatformServices, Version=1.35.1.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>$(SolutionDir)\packages\Google.Apis.1.35.1\lib\net45\Google.Apis.PlatformServices.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=1.4.2.13, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpZipLib.1.4.2\lib\netstandard2.0\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Ionic.Zip.Reduced, Version=1.9.1.8, Culture=neutral, PublicKeyToken=edbe51ad942a3f5c, processorArchitecture=MSIL">
+      <HintPath>..\packages\DotNetZip.Reduced.1.9.1.8\lib\net20\Ionic.Zip.Reduced.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.7.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Win32.Registry, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Win32.Registry.5.0.0\lib\net461\Microsoft.Win32.Registry.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp, Version=106.5.4.0, Culture=neutral, PublicKeyToken=598062e77f915f75" />
+    <Reference Include="SeleniumExtras.PageObjects, Version=3.11.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>$(SolutionDir)\packages\DotNetSeleniumExtras.PageObjects.3.11.0\lib\net45\SeleniumExtras.PageObjects.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>$(SolutionDir)\packages\System.IO.4.3.0\lib\net462\System.IO.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http, Version=4.1.1.3, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.Http.4.3.4\lib\net46\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime, Version=4.1.1.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.4.3.1\lib\net462\System.Runtime.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.InteropServices.RuntimeInformation.4.3.0\lib\net45\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.AccessControl, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.AccessControl.5.0.0\lib\net461\System.Security.AccessControl.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Algorithms, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>$(SolutionDir)\packages\System.Security.Cryptography.Algorithms.4.3.1\lib\net463\System.Security.Cryptography.Algorithms.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Encoding, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>$(SolutionDir)\packages\System.Security.Cryptography.Encoding.4.3.0\lib\net46\System.Security.Cryptography.Encoding.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>$(SolutionDir)\packages\System.Security.Cryptography.Primitives.4.3.0\lib\net46\System.Security.Cryptography.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.X509Certificates, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>$(SolutionDir)\packages\System.Security.Cryptography.X509Certificates.4.3.0\lib\net461\System.Security.Cryptography.X509Certificates.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Principal.Windows, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Principal.Windows.5.0.0\lib\net461\System.Security.Principal.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encoding.CodePages, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encoding.CodePages.6.0.0\lib\net461\System.Text.Encoding.CodePages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encodings.Web, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encodings.Web.7.0.0\lib\net462\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=7.0.0.3, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Json.7.0.3\lib\net462\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TechTalk.SpecFlow, Version=2.4.0.0, Culture=neutral, PublicKeyToken=0778194805d6db41, processorArchitecture=MSIL">
+      <HintPath>$(SolutionDir)\packages\SpecFlow.2.4.1\lib\net45\TechTalk.SpecFlow.dll</HintPath>
+    </Reference>
+    <Reference Include="Validation, Version=2.4.0.0, Culture=neutral, PublicKeyToken=2fc06f0d701809a7, processorArchitecture=MSIL">
+      <HintPath>$(SolutionDir)\packages\Validation.2.4.18\lib\net45\Validation.dll</HintPath>
+    </Reference>
+    <Reference Include="WebDriver, Version=3.141.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Selenium.WebDriver.3.141.0\lib\net45\WebDriver.dll</HintPath>
+    </Reference>
+    <Reference Include="WebDriver.Support, Version=3.141.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>$(SolutionDir)\packages\Selenium.Support.3.141.0\lib\net45\WebDriver.Support.dll</HintPath>
+    </Reference>
+    <Reference Include="xRetry, Version=1.9.0.0, Culture=neutral, PublicKeyToken=8d689297dc95b0e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\xRetry.1.9.0\lib\net452\xRetry.dll</HintPath>
+    </Reference>
+    <Reference Include="xunit.abstractions, Version=2.0.0.0, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
+      <HintPath>$(SolutionDir)\packages\xunit.abstractions.2.0.3\lib\net35\xunit.abstractions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="xunit.assert, Version=2.4.2.0, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
+      <HintPath>..\packages\xunit.assert.2.4.2\lib\netstandard1.1\xunit.assert.dll</HintPath>
+    </Reference>
+    <Reference Include="xunit.core, Version=2.4.2.0, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
+      <HintPath>..\packages\xunit.extensibility.core.2.4.2\lib\net452\xunit.core.dll</HintPath>
+    </Reference>
+    <Reference Include="xunit.execution.desktop, Version=2.4.2.0, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
+      <HintPath>..\packages\xunit.extensibility.execution.2.4.2\lib\net452\xunit.execution.desktop.dll</HintPath>
+    </Reference>
+    <Reference Include="Xunit.Priority, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Xunit.Priority.1.1.6\lib\net452\Xunit.Priority.dll</HintPath>
+    </Reference>
+    <Reference Include="Xunit.SkippableFact, Version=1.4.0.0, Culture=neutral, PublicKeyToken=b2b52da82b58eb73, processorArchitecture=MSIL">
+      <HintPath>..\packages\Xunit.SkippableFact.1.4.13\lib\net452\Xunit.SkippableFact.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Constants\CertonaSchemes.cs" />
+    <Compile Include="Constants\StreetCityStateCountry\CityList.cs" />
+    <Compile Include="Constants\PaymentType.cs" />
+    <Compile Include="Constants\CreditCardInfo.cs" />
+    <Compile Include="Constants\FileUpload.cs" />
+    <Compile Include="Constants\AccountManagerServiceAccountType.cs" />
+    <Compile Include="Constants\StreetCityStateCountry\StreetList.cs" />
+    <Compile Include="Constants\ViewPortWidth.cs" />
+    <Compile Include="Databases\Entities\ArProductModel.cs" />
+    <Compile Include="Databases\Entities\BrandModel.cs" />
+    <Compile Include="Databases\Entities\ProductNotifyMeDetails.cs" />
+    <Compile Include="Databases\Entities\SortFormulaIdModel.cs" />
+    <Compile Include="Databases\Entities\UserInfo.cs" />
+    <Compile Include="Databases\Queries\AddingToCartAndWishList\OpenBoxItemSku.cs" />
+    <Compile Include="Databases\Queries\Certona\StoreLocation.cs" />
+    <Compile Include="Databases\Queries\Orders\GlobalOrderDetails.cs" />
+    <Compile Include="Databases\Queries\Orders\OpenBoxOrder.cs" />
+    <Compile Include="Databases\Queries\Orders\OrderDiscountAndFreightTotals.cs" />
+    <Compile Include="Databases\Queries\PricingBlock\PricingBlockSku.cs" />
+    <Compile Include="Databases\Queries\PricingBlock\ResidentialProductOnSaleSFPAndPLA.cs" />
+    <Compile Include="Databases\Queries\PricingBlock\ResidentialProductOnRegularPricePros.cs" />
+    <Compile Include="Databases\Queries\PricingBlock\ResidentialProductSkuOnRegularPrice.cs" />
+    <Compile Include="Databases\Queries\ProductDetailCallout\HundredPlusCallOut.cs" />
+    <Compile Include="Databases\Queries\ProductDetailCallout\PhoneNumberForCallToOrderProductCallout.cs" />
+    <Compile Include="Databases\Queries\ProductDetailCallout\ShipsFreeOnOrdersOver49CallOutShortSkuMultiProduct.cs" />
+    <Compile Include="Databases\Queries\Orders\OrderIdExists.cs" />
+    <Compile Include="Databases\Queries\ProductDetailSpecificProduct\AnySkuBetweenTenAndTwentyDollars.cs" />
+    <Compile Include="Databases\Queries\ProductDetail\AnySkuWithBrand.cs" />
+    <Compile Include="Databases\Queries\ProductDetail\AnySkuWithRelatedVideos.cs" />
+    <Compile Include="Databases\Queries\ProductDetail\AugmentedReality2DAnd3DSku.cs" />
+    <Compile Include="Databases\Queries\ProductDetail\CallToOrderSku.cs" />
+    <Compile Include="Databases\Queries\ProductDetail\CollageRetailPriceAndProductName.cs" />
+    <Compile Include="Databases\Queries\ProductDetail\GetLampsPlusChoiceSku.cs" />
+    <Compile Include="Databases\Queries\ProductDetail\GetOpenBoxItemWithName.cs" />
+    <Compile Include="Databases\Queries\ProductDetail\GetReplacementBulbDetail.cs" />
+    <Compile Include="Databases\Queries\ProductDetail\GetSkuForFinishAndColorRelationshipWidget.cs" />
+    <Compile Include="Databases\Queries\ProductDetail\GetSkusThatHaveArOption.cs" />
+    <Compile Include="Databases\Queries\ProductDetail\GetSkuThatHasArOption.cs" />
+    <Compile Include="Databases\Queries\ProductDetail\GetSkuThatHasGoodToKnowIcons.cs" />
+    <Compile Include="Databases\Queries\ProductDetail\GetSkuWithPriceBetween30And1350.cs" />
+    <Compile Include="Databases\Queries\ProductDetail\GetSkuWithPriceLessThan30.cs" />
+    <Compile Include="Databases\Queries\ProductDetail\GetSkuWithPriceMoreThan1500.cs" />
+    <Compile Include="Databases\Queries\ProductDetail\ProductNotAvailableSku.cs" />
+    <Compile Include="Databases\Queries\ProductDetail\ProductWithSaleAndComparableValue.cs" />
+    <Compile Include="Databases\Queries\ProductDetail\ProsProductTrade.cs" />
+    <Compile Include="Databases\Queries\ProductDetail\ReplacementPartDetails.cs" />
+    <Compile Include="Databases\Queries\ProductDetail\ReplacementPartSku.cs" />
+    <Compile Include="Databases\Queries\ProductDetail\ResidentialClearanceProduct.cs" />
+    <Compile Include="Databases\Queries\ProductDetail\ReturnStorePhoneNumberByCity.cs" />
+    <Compile Include="Databases\Queries\ProductDetail\SkuFor2DRoom.cs" />
+    <Compile Include="Databases\Queries\ProductDetail\SkuThatHasFinishFamilyWithMoreFinishesSlider.cs" />
+    <Compile Include="Databases\Queries\ProductDetail\SkuThatHasSpecificationTable.cs" />
+    <Compile Include="Databases\Queries\ProductDetail\SkuThatQualifyShipInOption.cs" />
+    <Compile Include="Databases\Queries\ProductDetail\SkuWithSavingsGreaterThan5Dollar.cs" />
+    <Compile Include="Databases\Queries\Shipping\SavedAddressByCartId.cs" />
+    <Compile Include="Databases\Queries\ShoppingCartEmployee\RandomStoreZipCode.cs" />
+    <Compile Include="Databases\Queries\ShoppingCartEmployee\ReturnCartDetail.cs" />
+    <Compile Include="Databases\Queries\ShoppingCart\GetDeliveryDays.cs" />
+    <Compile Include="Databases\Queries\ShoppingCart\GetManualDiscountableSku.cs" />
+    <Compile Include="Databases\Queries\ShoppingCart\ShortSkuQualifiedForSaleEndsInCallout.cs" />
+    <Compile Include="Databases\Queries\SortCallout\DailySaleQuantityLeftCalloutsShortSku.cs" />
+    <Compile Include="Databases\Queries\SortCallout\ProductWithMoreOptionsCallout.cs" />
+    <Compile Include="Databases\Queries\SortCallout\SixteenPlusColorsCallout.cs" />
+    <Compile Include="Databases\Queries\SortCallout\SoldOutCalloutShortSku.cs" />
+    <Compile Include="Databases\Queries\Sort\GetCartItemsPathPosition.cs" />
+    <Compile Include="Databases\Entities\PaymentInfoModel.cs" />
+    <Compile Include="Databases\Queries\Sort\GetDataCaptureFormulaId.cs" />
+    <Compile Include="Databases\Queries\Sort\GetImageSearchItem.cs" />
+    <Compile Include="Databases\Queries\Sort\GetSaleProductSkuAndProductName.cs" />
+    <Compile Include="Databases\Queries\Sort\GetShortSkuForSfp.cs" />
+    <Compile Include="Databases\Queries\Sort\GetSortUrlForFds.cs" />
+    <Compile Include="Databases\Queries\Sort\GetSortWithActiveAbTestData.cs" />
+    <Compile Include="Databases\Queries\Sort\GetSortWithNoActiveAbTestData.cs" />
+    <Compile Include="Databases\Queries\Sort\GetTestCompositionId.cs" />
+    <Compile Include="Databases\Queries\Sort\SortPageWithActiveAbTest.cs" />
+    <Compile Include="Databases\Queries\UserProfile\DisableUser.cs" />
+    <Compile Include="Databases\Queries\UserProfile\EnableDisabledUsers.cs" />
+    <Compile Include="Databases\Queries\UserProfile\FindUserEmployeeNumber.cs" />
+    <Compile Include="Databases\Queries\UserProfile\NotifyMeEmail.cs" />
+    <Compile Include="Databases\Queries\UserProfile\ResetUserPaymentOptions.cs" />
+    <Compile Include="Databases\Queries\UserProfile\UpdateUserNamePhone.cs" />
+    <Compile Include="Databases\Queries\UserProfile\ResetUserShippingAddresses.cs" />
+    <Compile Include="Databases\Queries\UserProfile\UserProfilePaymentInfo.cs" />
+    <Compile Include="Enums\EnvironmentUnderTest.cs" />
+    <Compile Include="Exceptions\EnvironmentNotFoundException.cs" />
+    <Compile Include="Pages\Base\ProductDetailTiffanyColorPlusBase.cs" />
+    <Compile Include="Pages\Base\ProductDetailMultiProductBase.cs" />
+    <Compile Include="Pages\Base\ProductDetailMcpBase.cs" />
+    <Compile Include="Pages\Base\ProductDetailTrackLightingBase.cs" />
+    <Compile Include="Pages\Base\ProductDetailDimmersBase.cs" />
+    <Compile Include="Pages\Base\ProductDetailColorPlusBase.cs" />
+    <Compile Include="Pages\Base\ProductDetailFinishFamilyBase.cs" />
+    <Compile Include="Pages\Desktop\MagicMerchandizer.cs" />
+    <Compile Include="Pages\Desktop\ProductDetailTiffanyColorPlus.cs" />
+    <Compile Include="Pages\Desktop\ProductDetailMultiProduct.cs" />
+    <Compile Include="Pages\Desktop\ProductDetailMcp.cs" />
+    <Compile Include="Pages\Desktop\ProductDetailTrackLighting.cs" />
+    <Compile Include="Pages\Desktop\ProductDetailDimmers.cs" />
+    <Compile Include="Pages\Desktop\ProductDetailColorPlus.cs" />
+    <Compile Include="Pages\Desktop\ProductDetailFinishFamily.cs" />
+    <Compile Include="Pages\IGlobalLocators.cs" />
+    <Compile Include="Pages\Desktop\GlobalLocators.cs" />
+    <Compile Include="Pages\IMagicMerchandizer.cs" />
+    <Compile Include="Pages\OrderPreview.cs" />
+    <Compile Include="Pages\IProductDetailTiffanyColorPlus.cs" />
+    <Compile Include="Pages\IProductDetailMultiProduct.cs" />
+    <Compile Include="Pages\IProductDetailMcp.cs" />
+    <Compile Include="Pages\IProductDetailTrackLighting.cs" />
+    <Compile Include="Pages\IProductDetailDimmers.cs" />
+    <Compile Include="Pages\IProductDetailColorPlus.cs" />
+    <Compile Include="Pages\IProductDetailFinishFamily.cs" />
+    <Compile Include="Pages\Mobile\MobileGlobalLocators.cs" />
+    <Compile Include="Constants\Reasons.cs" />
+    <Compile Include="Constants\ShoppingCartTypes.cs" />
+    <Compile Include="Constants\Sources.cs" />
+    <Compile Include="Pages\Base\GlobalLocatorsBase.cs" />
+    <Compile Include="Constants\LpTraits.cs" />
+    <Compile Include="Constants\Messages.cs" />
+    <Compile Include="Constants\ShippingTypes.cs" />
+    <Compile Include="Databases\Actions\ShoppingCartActions.cs" />
+    <Compile Include="Databases\Actions\SortActions.cs" />
+    <Compile Include="Databases\Entities\OrderDiscounts.cs" />
+    <Compile Include="Databases\Entities\OptOutModel.cs" />
+    <Compile Include="Databases\Entities\ShoppingCartSummaryModel.cs" />
+    <Compile Include="Databases\Entities\SortPathPositionModel.cs" />
+    <Compile Include="Databases\Queries\Orders\OrderLincQualifying.cs" />
+    <Compile Include="Databases\Queries\ProductDetailSpecificProduct\FindRandomComboKitSku.cs" />
+    <Compile Include="Databases\Queries\ProductDetail\FinialWithMultipleShippingOptionsSku.cs" />
+    <Compile Include="Databases\Queries\ProductDetail\GetTwoSkusWithNullUmrp.cs" />
+    <Compile Include="Databases\Queries\ProductDetail\SkuThatQualifiesForReviews.cs" />
+    <Compile Include="Databases\Queries\ProductDetail\SkuWithViewInRoomOnPDP.cs" />
+    <Compile Include="Databases\Queries\ShoppingCart\DiscountRateForOrderTotal.cs" />
+    <Compile Include="Databases\Queries\ShoppingCart\GetCartTotalValues.cs" />
+    <Compile Include="Databases\Queries\ShoppingCart\GetItemNotOnSale.cs" />
+    <Compile Include="Databases\Queries\SortCallout\ProductWithFreeShippingCallout.cs" />
+    <Compile Include="Databases\Queries\Sort\SortPathPositionCartSharedItems.cs" />
+    <Compile Include="Databases\Queries\Sort\SortPathPositionSharedItems.cs" />
+    <Compile Include="Databases\Queries\ShoppingCart\OrderTotalSelectedCompany.cs" />
+    <Compile Include="Databases\Queries\SubmittingOrders\FindLincCompatibleProduct.cs" />
+    <Compile Include="Databases\Queries\SubmittingOrders\GetOrderRecordsInTblGlobalOrderHeader.cs" />
+    <Compile Include="Databases\Queries\UserProfile\FindUserCommissionNumber.cs" />
+    <Compile Include="Databases\Queries\UserProfile\UserProfileOptOutValues.cs" />
+    <Compile Include="Pages\Base\PaymentBase.cs" />
+    <Compile Include="Pages\Base\CustomerAddressInformationBase.cs" />
+    <Compile Include="Pages\Base\ContactUsBase.cs" />
+    <Compile Include="Pages\Base\CreateAccountBase.cs" />
+    <Compile Include="Pages\Base\CsrBlockBase.cs" />
+    <Compile Include="Pages\Base\EmployeeToolsBase.cs" />
+    <Compile Include="Pages\Base\LightingCollectionBase.cs" />
+    <Compile Include="Pages\Desktop\EmployeeTools.cs" />
+    <Compile Include="Pages\Desktop\LightingCollection.cs" />
+    <Compile Include="Pages\IEmployeeTools.cs" />
+    <Compile Include="Pages\ILightingCollection.cs" />
+    <Compile Include="Pages\IStores.cs" />
+    <Compile Include="Pages\IEmployeeOrderLookup.cs" />
+    <Compile Include="Pages\IHeaderFooter.cs" />
+    <Compile Include="Pages\IHome.cs" />
+    <Compile Include="Pages\IManageAccount.cs" />
+    <Compile Include="Pages\IOrderConfirmation.cs" />
+    <Compile Include="Pages\IOrderDetails.cs" />
+    <Compile Include="Pages\IOrderHistory.cs" />
+    <Compile Include="Pages\IOrderSummaryBlock.cs" />
+    <Compile Include="Pages\IPayPal.cs" />
+    <Compile Include="Pages\IProductDetail.cs" />
+    <Compile Include="Pages\IRoomViewer.cs" />
+    <Compile Include="Pages\ISearch.cs" />
+    <Compile Include="Pages\IShipping.cs" />
+    <Compile Include="Pages\ICartOverview.cs" />
+    <Compile Include="Pages\ISignIn.cs" />
+    <Compile Include="Pages\ISort.cs" />
+    <Compile Include="Pages\ISortBucket.cs" />
+    <Compile Include="Pages\ISortFullPageCertona.cs" />
+    <Compile Include="Pages\ISortPla.cs" />
+    <Compile Include="Pages\IWishList.cs" />
+    <Compile Include="Pages\IContactUs.cs" />
+    <Compile Include="Pages\ICreateAccount.cs" />
+    <Compile Include="Pages\ICsrBlock.cs" />
+    <Compile Include="Pages\ICustomerAddressInformation.cs" />
+    <Compile Include="Pages\IEmail.cs" />
+    <Compile Include="Pages\IPayment.cs" />
+    <Compile Include="Pages\Base\PayPalBase.cs" />
+    <Compile Include="Pages\Base\SortBucketBase.cs" />
+    <Compile Include="Pages\Base\SortFullPageCertonaBase.cs" />
+    <Compile Include="Pages\Base\SortPlaBase.cs" />
+    <Compile Include="Pages\Base\WishListBase.cs" />
+    <Compile Include="Pages\Base\StoresBase.cs" />
+    <Compile Include="Pages\Base\SortBase.cs" />
+    <Compile Include="Pages\Base\SignInBase.cs" />
+    <Compile Include="Pages\Base\CartOverviewBase.cs" />
+    <Compile Include="Pages\Base\ShippingBase.cs" />
+    <Compile Include="Pages\Base\SearchBase.cs" />
+    <Compile Include="Pages\Base\RoomViewerBase.cs" />
+    <Compile Include="Pages\Base\ProductDetailBase.cs" />
+    <Compile Include="Pages\Base\OrderHistoryBase.cs" />
+    <Compile Include="Pages\Base\OrderDetailsBase.cs" />
+    <Compile Include="Pages\Base\OrderConfirmationBase.cs" />
+    <Compile Include="Pages\Base\ManageAccountBase.cs" />
+    <Compile Include="Pages\Base\HomeBase.cs" />
+    <Compile Include="Pages\Base\EmployeeOrderLookupBase.cs" />
+    <Compile Include="Pages\Base\HeaderFooterBase.cs" />
+    <Compile Include="Pages\Base\OrderSummaryBlockBase.cs" />
+    <Compile Include="Pages\Base\EmailBase.cs" />
+    <Compile Include="Pages\Mobile\MobilePayment.cs" />
+    <Compile Include="Pages\Desktop\RoomViewer.cs" />
+    <Compile Include="Pages\Base\MagicMerchandizerBase.cs" />
+    <Compile Include="Pages\Mobile\MobileContactUs.cs" />
+    <Compile Include="Pages\Mobile\MobileCreateAccount.cs" />
+    <Compile Include="Pages\Mobile\MobileCustomerAddressInformation.cs" />
+    <Compile Include="Pages\Mobile\MobileEmail.cs" />
+    <Compile Include="Pages\Mobile\MobileHeaderFooter.cs" />
+    <Compile Include="Pages\Mobile\MobileHome.cs" />
+    <Compile Include="Pages\Mobile\MobileManageAccount.cs" />
+    <Compile Include="Pages\Mobile\MobileOrderConfirmation.cs" />
+    <Compile Include="Pages\Mobile\MobileOrderDetails.cs" />
+    <Compile Include="Pages\Mobile\MobileOrderHistory.cs" />
+    <Compile Include="Pages\Mobile\MobilePayPal.cs" />
+    <Compile Include="Pages\Mobile\MobileProductDetailDimmers.cs" />
+    <Compile Include="Pages\Mobile\MobileProductDetailFinishFamily.cs" />
+    <Compile Include="Pages\Mobile\MobileProductDetailMcp.cs" />
+    <Compile Include="Pages\Mobile\MobileProductDetailMultiProduct.cs" />
+    <Compile Include="Pages\Mobile\MobileProductDetailTiffanyColorPlus.cs" />
+    <Compile Include="Pages\Mobile\MobileProductDetailTrackLighting.cs" />
+    <Compile Include="Pages\Mobile\MobileProductDetails.cs" />
+    <Compile Include="Pages\Mobile\MobileRoomViewer.cs" />
+    <Compile Include="Pages\Mobile\MobileSearch.cs" />
+    <Compile Include="Pages\Mobile\MobileShipping.cs" />
+    <Compile Include="Pages\Mobile\MobileCartOverview.cs" />
+    <Compile Include="Pages\Mobile\MobileSignIn.cs" />
+    <Compile Include="Pages\Mobile\MobileSort.cs" />
+    <Compile Include="Pages\Mobile\MobileSortFullPageCertona.cs" />
+    <Compile Include="Pages\Mobile\MobileSortPla.cs" />
+    <Compile Include="Pages\Mobile\MobileStores.cs" />
+    <Compile Include="Pages\Mobile\MobileWishList.cs" />
+    <Compile Include="Pages\Mobile\MobileOrderSummaryBlock.cs" />
+    <Compile Include="Pages\Mobile\MobileProductDetailColorPlus.cs" />
+    <Compile Include="Pages\Refactored\Address\Address.cs" />
+    <Compile Include="Pages\Refactored\Address\IAddress.cs" />
+    <Compile Include="Pages\Refactored\Address\IIntAddress.cs" />
+    <Compile Include="Pages\Refactored\Address\IRandomAddressGenerator.cs" />
+    <Compile Include="Pages\Refactored\Cart\CartDesktop.cs" />
+    <Compile Include="Pages\Refactored\Cart\Visual\CartDesktopVisual.cs" />
+    <Compile Include="Pages\Refactored\Cart\CartMobile.cs" />
+    <Compile Include="Pages\Refactored\Cart\ICartDesktop.cs" />
+    <Compile Include="Pages\Refactored\Cart\ICartMobile.cs" />
+    <Compile Include="Pages\Refactored\Cart\Visual\CartMobileVisual.cs" />
+    <Compile Include="Pages\Refactored\Cart\Visual\ICartDesktopVisual.cs" />
+    <Compile Include="Pages\Refactored\Cart\Visual\ICartMobileVisual.cs" />
+    <Compile Include="Pages\Refactored\CustomerAddressInformation\Visual\CustomerAddressInformationDesktopVisual.cs" />
+    <Compile Include="Pages\Refactored\CustomerAddressInformation\Visual\CustomerAddressInformationMobileVisual.cs" />
+    <Compile Include="Pages\Refactored\CustomerAddressInformation\Visual\ICustomerAddressInformationDesktopVisual.cs" />
+    <Compile Include="Pages\Refactored\CustomerAddressInformation\Visual\ICustomerAddressInformationMobileVisual.cs" />
+    <Compile Include="Pages\Refactored\Email\EmailDesktop.cs" />
+    <Compile Include="Pages\Refactored\Email\EmailMobile.cs" />
+    <Compile Include="Pages\Refactored\Email\IEmailDesktop.cs" />
+    <Compile Include="Pages\Refactored\Email\IEmailMobile.cs" />
+    <Compile Include="Pages\Refactored\HeaderFooter\HeaderFooterDesktop.cs" />
+    <Compile Include="Pages\Refactored\HeaderFooter\HeaderFooterMobile.cs" />
+    <Compile Include="Pages\Refactored\HeaderFooter\IHeaderFooterDesktop.cs" />
+    <Compile Include="Pages\Refactored\HeaderFooter\IHeaderFooterMobile.cs" />
+    <Compile Include="Pages\Refactored\Email\Visual\EmailDesktopVisual.cs" />
+    <Compile Include="Pages\Refactored\Email\Visual\EmailMobileVisual.cs" />
+    <Compile Include="Pages\Refactored\Email\Visual\IEmailDesktopVisual.cs" />
+    <Compile Include="Pages\Refactored\Email\Visual\IEmailMobileVisual.cs" />
+    <Compile Include="Pages\Refactored\HeaderFooter\Visual\HeaderFooterDesktopVisual.cs" />
+    <Compile Include="Pages\Refactored\HeaderFooter\Visual\IHeaderFooterDesktopVisual.cs" />
+    <Compile Include="Pages\Refactored\Home\HomeDesktop.cs" />
+    <Compile Include="Pages\Refactored\Home\HomeMobile.cs" />
+    <Compile Include="Pages\Refactored\Home\IHomeDesktop.cs" />
+    <Compile Include="Pages\Refactored\Home\IHomeMobile.cs" />
+    <Compile Include="Pages\Refactored\CsrBlock\CsrBlockDesktop.cs" />
+    <Compile Include="Pages\Refactored\CsrBlock\CsrBlockMobile.cs" />
+    <Compile Include="Pages\Refactored\CsrBlock\ICsrBlockDesktop.cs" />
+    <Compile Include="Pages\Refactored\CsrBlock\ICsrBlockMobile.cs" />
+    <Compile Include="Pages\Refactored\CustomerAddressInformation\CustomerAddressInformationDesktop.cs" />
+    <Compile Include="Pages\Refactored\CustomerAddressInformation\CustomerAddressInformationMobile.cs" />
+    <Compile Include="Pages\Refactored\CustomerAddressInformation\ICustomerAddressInformationDesktop.cs" />
+    <Compile Include="Pages\Refactored\CustomerAddressInformation\ICustomerAddressInformationMobile.cs" />
+    <Compile Include="Pages\Refactored\Home\Visual\HomeDesktopVisual.cs" />
+    <Compile Include="Pages\Refactored\Home\Visual\HomeMobileVisual.cs" />
+    <Compile Include="Pages\Refactored\Home\Visual\IHomeDesktopVisual.cs" />
+    <Compile Include="Pages\Refactored\Home\Visual\IHomeMobileVisual.cs" />
+    <Compile Include="Pages\Refactored\IPageObjectModel.cs" />
+    <Compile Include="Pages\Refactored\ManageAccount\IManageAccountDesktop.cs" />
+    <Compile Include="Pages\Refactored\ManageAccount\IManageAccountMobile.cs" />
+    <Compile Include="Pages\Refactored\ManageAccount\ManageAccountDesktop.cs" />
+    <Compile Include="Pages\Refactored\ManageAccount\ManageAccountMobile.cs" />
+    <Compile Include="Pages\Refactored\EmployeeOrderLookup\IEmployeeOrderLookupDesktop.cs" />
+    <Compile Include="Pages\Refactored\EmployeeOrderLookup\IEmployeeOrderLookupMobile.cs" />
+    <Compile Include="Pages\Refactored\EmployeeOrderLookup\EmployeeOrderLookupDesktop.cs" />
+    <Compile Include="Pages\Refactored\EmployeeOrderLookup\EmployeeOrderLookupMobile.cs" />
+    <Compile Include="Pages\Refactored\EmployeeTools\IEmployeeToolsDesktop.cs" />
+    <Compile Include="Pages\Refactored\EmployeeTools\IEmployeeToolsMobile.cs" />
+    <Compile Include="Pages\Refactored\EmployeeTools\EmployeeToolsDesktop.cs" />
+    <Compile Include="Pages\Refactored\EmployeeTools\EmployeeToolsMobile.cs" />
+    <Compile Include="Pages\Refactored\LightingCollection\ILightingCollectionDesktop.cs" />
+    <Compile Include="Pages\Refactored\LightingCollection\ILightingCollectionMobile.cs" />
+    <Compile Include="Pages\Refactored\LightingCollection\LightingCollectionDesktop.cs" />
+    <Compile Include="Pages\Refactored\LightingCollection\LightingCollectionMobile.cs" />
+    <Compile Include="Pages\Refactored\MagicMerchandizer\IMagicMerchandizerDesktop.cs" />
+    <Compile Include="Pages\Refactored\MagicMerchandizer\IMagicMerchandizerMobile.cs" />
+    <Compile Include="Pages\Refactored\MagicMerchandizer\MagicMerchandizerDesktop.cs" />
+    <Compile Include="Pages\Refactored\MagicMerchandizer\MagicMerchandizerMobile.cs" />
+    <Compile Include="Pages\Refactored\ManageAccount\Visual\IManageAccountDesktopVisual.cs" />
+    <Compile Include="Pages\Refactored\ManageAccount\Visual\IManageAccountMobileVisual.cs" />
+    <Compile Include="Pages\Refactored\ManageAccount\Visual\ManageAccountDesktopVisual.cs" />
+    <Compile Include="Pages\Refactored\ManageAccount\Visual\ManageAccountMobileVisual.cs" />
+    <Compile Include="Pages\Refactored\MobileDrawer\IMobileDrawer.cs" />
+    <Compile Include="Pages\Refactored\MobileDrawer\MobileDrawer.cs" />
+    <Compile Include="Pages\Refactored\Modal\IModalDesktop.cs" />
+    <Compile Include="Pages\Refactored\Modal\IModalMobile.cs" />
+    <Compile Include="Pages\Refactored\Modal\ModalDesktop.cs" />
+    <Compile Include="Pages\Refactored\Modal\ModalMobile.cs" />
+    <Compile Include="Pages\Refactored\OrderConfirmation\IOrderConfirmationDesktop.cs" />
+    <Compile Include="Pages\Refactored\OrderConfirmation\IOrderConfirmationMobile.cs" />
+    <Compile Include="Pages\Refactored\OrderConfirmation\OrderConfirmationDesktop.cs" />
+    <Compile Include="Pages\Refactored\OrderConfirmation\OrderConfirmationMobile.cs" />
+    <Compile Include="Pages\Refactored\OrderConfirmation\Visual\IOrderConfirmationDesktopVisual.cs" />
+    <Compile Include="Pages\Refactored\OrderConfirmation\Visual\IOrderConfirmationMobileVisual.cs" />
+    <Compile Include="Pages\Refactored\OrderConfirmation\Visual\OrderConfirmationDesktopVisual.cs" />
+    <Compile Include="Pages\Refactored\OrderConfirmation\Visual\OrderConfirmationMobileVisual.cs" />
+    <Compile Include="Pages\Refactored\OrderDetails\IOrderDetailsDesktop.cs" />
+    <Compile Include="Pages\Refactored\OrderDetails\IOrderDetailsMobile.cs" />
+    <Compile Include="Pages\Refactored\OrderDetails\OrderDetailsDesktop.cs" />
+    <Compile Include="Pages\Refactored\OrderDetails\OrderDetailsMobile.cs" />
+    <Compile Include="Pages\Refactored\OrderDetails\Visual\IOrderDetailsDesktopVisual.cs" />
+    <Compile Include="Pages\Refactored\OrderDetails\Visual\IOrderDetailsMobileVisual.cs" />
+    <Compile Include="Pages\Refactored\OrderDetails\Visual\OrderDetailsDesktopVisual.cs" />
+    <Compile Include="Pages\Refactored\OrderDetails\Visual\OrderDetailsMobileVisual.cs" />
+    <Compile Include="Pages\Refactored\OrderHistory\IOrderHistoryDesktop.cs" />
+    <Compile Include="Pages\Refactored\OrderHistory\IOrderHistoryMobile.cs" />
+    <Compile Include="Pages\Refactored\OrderHistory\OrderHistoryDesktop.cs" />
+    <Compile Include="Pages\Refactored\OrderHistory\OrderHistoryMobile.cs" />
+    <Compile Include="Pages\Refactored\OrderHistory\Visual\IOrderHistoryDesktopVisual.cs" />
+    <Compile Include="Pages\Refactored\OrderHistory\Visual\IOrderHistoryMobileVisual.cs" />
+    <Compile Include="Pages\Refactored\OrderHistory\Visual\OrderHistoryDesktopVisual.cs" />
+    <Compile Include="Pages\Refactored\OrderHistory\Visual\OrderHistoryMobileVisual.cs" />
+    <Compile Include="Pages\Refactored\PayPal\IPayPalDesktop.cs" />
+    <Compile Include="Pages\Refactored\PayPal\IPayPalMobile.cs" />
+    <Compile Include="Pages\Refactored\PayPal\PayPalDesktop.cs" />
+    <Compile Include="Pages\Refactored\PayPal\PayPalMobile.cs" />
+    <Compile Include="Pages\Refactored\ProductDetailColorPlus\IProductDetailColorPlusDesktop.cs" />
+    <Compile Include="Pages\Refactored\ProductDetailColorPlus\IProductDetailColorPlusMobile.cs" />
+    <Compile Include="Pages\Refactored\ProductDetailColorPlus\ProductDetailColorPlusDesktop.cs" />
+    <Compile Include="Pages\Refactored\ProductDetailColorPlus\ProductDetailColorPlusMobile.cs" />
+    <Compile Include="Pages\Refactored\ProductDetailDimmers\IProductDetailDimmersDesktop.cs" />
+    <Compile Include="Pages\Refactored\ProductDetailDimmers\IProductDetailDimmersMobile.cs" />
+    <Compile Include="Pages\Refactored\ProductDetailDimmers\ProductDetailDimmersDesktop.cs" />
+    <Compile Include="Pages\Refactored\ProductDetailDimmers\ProductDetailDimmersMobile.cs" />
+    <Compile Include="Pages\Refactored\ProductDetailFinishFamily\IProductDetailFinishFamilyDesktop.cs" />
+    <Compile Include="Pages\Refactored\ProductDetailFinishFamily\IProductDetailFinishFamilyMobile.cs" />
+    <Compile Include="Pages\Refactored\ProductDetailFinishFamily\ProductDetailFinishFamilyDesktop.cs" />
+    <Compile Include="Pages\Refactored\ProductDetailFinishFamily\ProductDetailFinishFamilyMobile.cs" />
+    <Compile Include="Pages\Refactored\ProductDetailMcp\IProductDetailMcpDesktop.cs" />
+    <Compile Include="Pages\Refactored\ProductDetailMcp\IProductDetailMcpMobile.cs" />
+    <Compile Include="Pages\Refactored\ProductDetailMcp\ProductDetailMcpDesktop.cs" />
+    <Compile Include="Pages\Refactored\ProductDetailMcp\ProductDetailMcpMobile.cs" />
+    <Compile Include="Pages\Refactored\ProductDetailMultiProduct\IProductDetailMultiProductDesktop.cs" />
+    <Compile Include="Pages\Refactored\ProductDetailMultiProduct\IProductDetailMultiProductMobile.cs" />
+    <Compile Include="Pages\Refactored\ProductDetailMultiProduct\ProductDetailMultiProductDesktop.cs" />
+    <Compile Include="Pages\Refactored\ProductDetailMultiProduct\ProductDetailMultiProductMobile.cs" />
+    <Compile Include="Pages\Refactored\ProductDetailTiffanyColorPlus\IProductDetailTiffanyColorPlusDesktop.cs" />
+    <Compile Include="Pages\Refactored\ProductDetailTiffanyColorPlus\IProductDetailTiffanyColorPlusMobile.cs" />
+    <Compile Include="Pages\Refactored\ProductDetailTiffanyColorPlus\ProductDetailTiffanyColorPlusDesktop.cs" />
+    <Compile Include="Pages\Refactored\ProductDetailTiffanyColorPlus\ProductDetailTiffanyColorPlusMobile.cs" />
+    <Compile Include="Pages\Refactored\ProductDetailTrackLighting\IProductDetailTrackLightingDesktop.cs" />
+    <Compile Include="Pages\Refactored\ProductDetailTrackLighting\IProductDetailTrackLightingMobile.cs" />
+    <Compile Include="Pages\Refactored\ProductDetailTrackLighting\ProductDetailTrackLightingDesktop.cs" />
+    <Compile Include="Pages\Refactored\ProductDetailTrackLighting\ProductDetailTrackLightingMobile.cs" />
+    <Compile Include="Pages\Refactored\ProductDetail\Visual\IProductDetailDesktopVisual.cs" />
+    <Compile Include="Pages\Refactored\ProductDetail\Visual\IProductDetailMobileVisual.cs" />
+    <Compile Include="Pages\Refactored\ProductDetail\Visual\ProductDetailDesktopVisual.cs" />
+    <Compile Include="Pages\Refactored\ProductDetail\Visual\ProductDetailMobileVisual.cs" />
+    <Compile Include="Pages\Refactored\RoomViewer\IRoomViewerDesktop.cs" />
+    <Compile Include="Pages\Refactored\RoomViewer\IRoomViewerMobile.cs" />
+    <Compile Include="Pages\Refactored\RoomViewer\RoomViewerDesktop.cs" />
+    <Compile Include="Pages\Refactored\RoomViewer\RoomViewerMobile.cs" />
+    <Compile Include="Pages\Refactored\Search\ISearchDesktop.cs" />
+    <Compile Include="Pages\Refactored\Search\ISearchMobile.cs" />
+    <Compile Include="Pages\Refactored\Search\SearchDesktop.cs" />
+    <Compile Include="Pages\Refactored\Search\SearchMobile.cs" />
+    <Compile Include="Pages\Refactored\Search\Visual\ISearchDesktopVisual.cs" />
+    <Compile Include="Pages\Refactored\Search\Visual\ISearchMobileVisual.cs" />
+    <Compile Include="Pages\Refactored\Search\Visual\SearchDesktopVisual.cs" />
+    <Compile Include="Pages\Refactored\Search\Visual\SearchMobileVisual.cs" />
+    <Compile Include="Pages\Refactored\Shipping\Visual\IShippingDesktopVisual.cs" />
+    <Compile Include="Pages\Refactored\Shipping\Visual\IShippingMobileVisual.cs" />
+    <Compile Include="Pages\Refactored\Shipping\Visual\ShippingDesktopVisual.cs" />
+    <Compile Include="Pages\Refactored\Shipping\Visual\ShippingMobileVisual.cs" />
+    <Compile Include="Pages\Refactored\SignIn\Visual\ISignInDesktopVisual.cs" />
+    <Compile Include="Pages\Refactored\SignIn\Visual\ISignInMobileVisual.cs" />
+    <Compile Include="Pages\Refactored\SignIn\Visual\SignInDesktopVisual.cs" />
+    <Compile Include="Pages\Refactored\SignIn\Visual\SignInMobileVisual.cs" />
+    <Compile Include="Pages\Refactored\SortBucket\ISortBucketDesktop.cs" />
+    <Compile Include="Pages\Refactored\SortBucket\ISortBucketMobile.cs" />
+    <Compile Include="Pages\Refactored\SortBucket\SortBucketDesktop.cs" />
+    <Compile Include="Pages\Refactored\SortBucket\SortBucketMobile.cs" />
+    <Compile Include="Pages\Refactored\SortFullPageCertona\ISortFullPageCertonaDesktop.cs" />
+    <Compile Include="Pages\Refactored\SortFullPageCertona\ISortFullPageCertonaMobile.cs" />
+    <Compile Include="Pages\Refactored\SortFullPageCertona\SortFullPageCertonaDesktop.cs" />
+    <Compile Include="Pages\Refactored\SortFullPageCertona\SortFullPageCertonaMobile.cs" />
+    <Compile Include="Pages\Refactored\SortFullPageCertona\Visual\ISortFullPageCertonaDesktopVisual.cs" />
+    <Compile Include="Pages\Refactored\SortFullPageCertona\Visual\ISortFullPageCertonaMobileVisual.cs" />
+    <Compile Include="Pages\Refactored\SortFullPageCertona\Visual\SortFullPageCertonaDesktopVisual.cs" />
+    <Compile Include="Pages\Refactored\SortFullPageCertona\Visual\SortFullPageCertonaMobileVisual.cs" />
+    <Compile Include="Pages\Refactored\SortPla\ISortPlaDesktop.cs" />
+    <Compile Include="Pages\Refactored\SortPla\ISortPlaMobile.cs" />
+    <Compile Include="Pages\Refactored\SortPla\SortPlaDesktop.cs" />
+    <Compile Include="Pages\Refactored\SortPla\SortPlaMobile.cs" />
+    <Compile Include="Pages\Refactored\SortPla\Visual\ISortPlaDesktopVisual.cs" />
+    <Compile Include="Pages\Refactored\SortPla\Visual\ISortPlaMobileVisual.cs" />
+    <Compile Include="Pages\Refactored\SortPla\Visual\SortPlaDesktopVisual.cs" />
+    <Compile Include="Pages\Refactored\SortPla\Visual\SortPlaMobileVisual.cs" />
+    <Compile Include="Pages\Refactored\Sort\Visual\ISortDesktopVisual.cs" />
+    <Compile Include="Pages\Refactored\Sort\Visual\ISortMobileVisual.cs" />
+    <Compile Include="Pages\Refactored\Sort\Visual\SortDesktopVisual.cs" />
+    <Compile Include="Pages\Refactored\Sort\Visual\SortMobileVisual.cs" />
+    <Compile Include="Pages\Refactored\Stores\IStoresDesktop.cs" />
+    <Compile Include="Pages\Refactored\Stores\IStoresMobile.cs" />
+    <Compile Include="Pages\Refactored\Stores\StoresDesktop.cs" />
+    <Compile Include="Pages\Refactored\Stores\StoresMobile.cs" />
+    <Compile Include="Pages\Refactored\WishList\IWishListDesktop.cs" />
+    <Compile Include="Pages\Refactored\WishList\IWishListMobile.cs" />
+    <Compile Include="Pages\Refactored\WishList\Visual\IWishListDesktopVisual.cs" />
+    <Compile Include="Pages\Refactored\WishList\Visual\IWishListMobileVisual.cs" />
+    <Compile Include="Pages\Refactored\WishList\Visual\WishListDesktopVisual.cs" />
+    <Compile Include="Pages\Refactored\WishList\Visual\WishListMobileVisual.cs" />
+    <Compile Include="Pages\Refactored\WishList\WishListDesktop.cs" />
+    <Compile Include="Pages\Refactored\WishList\WishListMobile.cs" />
+    <Compile Include="Pages\Refactored\CreateAccount\ICreateAccountDesktop.cs" />
+    <Compile Include="Pages\Refactored\CreateAccount\ICreateAccountMobile.cs" />
+    <Compile Include="Pages\Refactored\CreateAccount\CreateAccountDesktop.cs" />
+    <Compile Include="Pages\Refactored\CreateAccount\CreateAccountMobile.cs" />
+    <Compile Include="Pages\Refactored\ContactUs\IContactUsDesktop.cs" />
+    <Compile Include="Pages\Refactored\ContactUs\IContactUsMobile.cs" />
+    <Compile Include="Pages\Refactored\ContactUs\ContactUsDesktop.cs" />
+    <Compile Include="Pages\Refactored\ContactUs\ContactUsMobile.cs" />
+    <Compile Include="Pages\Refactored\OrderSummaryBlock\IOrderSummaryBlockDesktop.cs" />
+    <Compile Include="Pages\Refactored\OrderSummaryBlock\IOrderSummaryBlockMobile.cs" />
+    <Compile Include="Pages\Refactored\OrderSummaryBlock\OrderSummaryBlockDesktop.cs" />
+    <Compile Include="Pages\Refactored\OrderSummaryBlock\OrderSummaryBlockMobile.cs" />
+    <Compile Include="Pages\Refactored\Payment\IPaymentDesktop.cs" />
+    <Compile Include="Pages\Refactored\Payment\IPaymentMobile.cs" />
+    <Compile Include="Pages\Refactored\Payment\PaymentDesktop.cs" />
+    <Compile Include="Pages\Refactored\Payment\PaymentMobile.cs" />
+    <Compile Include="Pages\Refactored\ProductDetail\IProductDetailDesktop.cs" />
+    <Compile Include="Pages\Refactored\ProductDetail\IProductDetailMobile.cs" />
+    <Compile Include="Pages\Refactored\ProductDetail\ProductDetailDesktop.cs" />
+    <Compile Include="Pages\Refactored\ProductDetail\ProductDetailMobile.cs" />
+    <Compile Include="Pages\Refactored\Shipping\IShippingDesktop.cs" />
+    <Compile Include="Pages\Refactored\Shipping\IShippingMobile.cs" />
+    <Compile Include="Pages\Refactored\Shipping\ShippingDesktop.cs" />
+    <Compile Include="Pages\Refactored\Shipping\ShippingMobile.cs" />
+    <Compile Include="Pages\Refactored\SignIn\ISignInDesktop.cs" />
+    <Compile Include="Pages\Refactored\SignIn\ISignInMobile.cs" />
+    <Compile Include="Pages\Refactored\SignIn\SignInDesktop.cs" />
+    <Compile Include="Pages\Refactored\SignIn\SignInMobile.cs" />
+    <Compile Include="Pages\Refactored\Sort\ISortDesktop.cs" />
+    <Compile Include="Pages\Refactored\Sort\ISortMobile.cs" />
+    <Compile Include="Pages\Refactored\Sort\SortDesktop.cs" />
+    <Compile Include="Pages\Refactored\Sort\SortMobile.cs" />
+    <Compile Include="Services\DenvJsonParser.cs" />
+    <Compile Include="Services\DenvPageParser.cs" />
+    <Compile Include="Services\DenvStringParser.cs" />
+    <Compile Include="Services\IDenvParser.cs" />
+    <Compile Include="Services\UserAccountManagerService.cs" />
+    <Compile Include="TestsBaseDesktop.cs" />
+    <Compile Include="TestsBaseMobile.cs" />
+    <Compile Include="TestsBaseRefactored\TestsBase.cs" />
+    <Compile Include="Utilities\DataCaptureUtility.cs" />
+    <Compile Include="Utilities\Environment\AccountConfiguration.cs" />
+    <Compile Include="Utilities\Environment\DatabaseConnectionStringsManager.cs" />
+    <Compile Include="Utilities\Environment\EnvironmentInformation.cs" />
+    <Compile Include="Utilities\NamesGenerator.cs" />
+    <Compile Include="Utilities\CookieUtility.cs" />
+    <Compile Include="Utilities\AddressGenerator.cs" />
+    <Compile Include="Utilities\Environment\EnvironmentResolver.cs" />
+    <Compile Include="Utilities\Environment\TestSetup.cs" />
+    <Compile Include="Utilities\External\Nada\EmailMessageModel.cs" />
+    <Compile Include="Utilities\External\Nada\NadaClient.cs" />
+    <Compile Include="Utilities\LampsPlusAccount.cs" />
+    <Compile Include="Utilities\LampsPlusAccounts.cs" />
+    <Compile Include="Utilities\LampsPlusMobileDevices.cs" />
+    <Compile Include="Utilities\NetworkLoggingUtility.cs" />
+    <Compile Include="Utilities\Payment\CreditCardType.cs" />
+    <Compile Include="Utilities\SearchPageUrls.cs" />
+    <Compile Include="Utilities\TestConfiguration\TestConfiguration.cs" />
+    <Compile Include="Constants\UserRolesTypes.cs" />
+    <Compile Include="Constants\WishListTypes.cs" />
+    <Compile Include="Databases\Actions\OrderActions.cs" />
+    <Compile Include="Databases\Actions\AccountActions.cs" />
+    <Compile Include="Databases\Entities\NewUserAccount.cs" />
+    <Compile Include="Databases\Entities\OrderLincModel.cs" />
+    <Compile Include="Databases\Entities\OrderIdModel.cs" />
+    <Compile Include="Databases\Entities\OrderHistoryItems.cs" />
+    <Compile Include="Databases\Entities\OrderModel.cs" />
+    <Compile Include="Databases\Queries\AddingToCartAndWishList\SkuThatHasQuantityGreaterThanTwenty.cs" />
+    <Compile Include="Databases\Queries\Certona\InStockCoordinatingItems.cs" />
+    <Compile Include="Databases\Queries\Certona\ListableInStockShortSku.cs" />
+    <Compile Include="Databases\Queries\Certona\SkuWithLessThanOrEqualToTenCoordPrdcts.cs" />
+    <Compile Include="Databases\Queries\ManageAccount\UserPhoneInfo.cs" />
+    <Compile Include="Databases\Queries\Orders\OrderHistoryOrderDetails.cs" />
+    <Compile Include="Databases\Queries\Orders\OrderLincCompatible.cs" />
+    <Compile Include="Databases\Queries\Orders\OrderDetails.cs" />
+    <Compile Include="Databases\Queries\Orders\OrderPlacedInLast60Days.cs" />
+    <Compile Include="Databases\Queries\Orders\OrderForEachStatus.cs" />
+    <Compile Include="Databases\Queries\Orders\OrderWithPayPal.cs" />
+    <Compile Include="Databases\Queries\ProductDetailCallout\ShipsInVerbiage.cs" />
+    <Compile Include="Databases\Queries\ProductDetailCallout\ShipsFreeWithinState.cs" />
+    <Compile Include="Databases\Queries\ProductDetailCallout\FreeShippingAndReturnShortSkus.cs" />
+    <Compile Include="Databases\Queries\ProductDetailCallout\LPProductOnSaleWithComparePrice.cs" />
+    <Compile Include="Databases\Queries\ProductDetailCallout\ProductNotLpProductAndSale.cs" />
+    <Compile Include="Databases\Queries\ProductDetailCallout\ProductWithLimitedInventory.cs" />
+    <Compile Include="Databases\Queries\ProductDetailCallout\ShipsFreeOnOrdersOver49CallOutShortSku.cs" />
+    <Compile Include="Databases\Queries\ProductDetailCallout\ShortSkuOnClearance.cs" />
+    <Compile Include="Databases\Queries\ProductDetailSpecificProduct\ColorPlusSku.cs" />
+    <Compile Include="Databases\Queries\ProductDetail\AnySkuWithProductPage.cs" />
+    <Compile Include="Databases\Queries\ProductDetailCallout\ProMemberSpecialPriceDiscontCallOutShortSku.cs" />
+    <Compile Include="Databases\Queries\ProductDetail\BuildFullSystemSku.cs" />
+    <Compile Include="Databases\Queries\ProductDetail\HousingOptionsSkus.cs" />
+    <Compile Include="Databases\Queries\SubmittingOrders\FindOrderHoldReasons.cs" />
+    <Compile Include="Databases\Queries\SubmittingOrders\FindBopusEligibleSku.cs" />
+    <Compile Include="Databases\Queries\SubmittingOrders\AnySkuLessThanTwoHundredDollars.cs" />
+    <Compile Include="Databases\Queries\ProductDetail\EmailProductRecipient.cs" />
+    <Compile Include="Databases\Queries\ProductDetail\EmailProductSource.cs" />
+    <Compile Include="Databases\Queries\ProductDetail\FanWithEnergyGuideIconShortSku.cs" />
+    <Compile Include="Databases\Queries\ProductDetail\FreeShippingSkuData.cs" />
+    <Compile Include="Databases\Queries\ProductDetail\SkuWithCheckStoreAvailabilityLinkOnPdp.cs" />
+    <Compile Include="Databases\Queries\ProductDetail\McpArtShadeItemSkus.cs" />
+    <Compile Include="Databases\Queries\ProductDetail\MultiProductShortSku.cs" />
+    <Compile Include="Databases\Queries\ProductDetail\OtherOptionSectionSkus.cs" />
+    <Compile Include="Databases\Queries\ProductDetail\ProductSalesData.cs" />
+    <Compile Include="Databases\Queries\ProductDetail\ShortSkuThatHasRelatedProducts.cs" />
+    <Compile Include="Databases\Queries\ProductDetail\SingleSku.cs" />
+    <Compile Include="Databases\Queries\ProductDetail\SingleSkuBathroomLighting.cs" />
+    <Compile Include="Databases\Queries\ProductDetail\SkuPopularProduct.cs" />
+    <Compile Include="Databases\Queries\ProductDetail\SkuSavePriceFiveAndOver.cs" />
+    <Compile Include="Databases\Queries\ProductDetail\SkuThatHasFinishFamily.cs" />
+    <Compile Include="Databases\Queries\ProductDetail\SkuThatHasHousingOptions.cs" />
+    <Compile Include="Databases\Queries\ProductDetail\SkuWithInventory.cs" />
+    <Compile Include="Databases\Queries\ProductDetail\SkuWithStatus.cs" />
+    <Compile Include="Databases\Queries\ProductDetail\TiffanyColorPlusSku.cs" />
+    <Compile Include="Databases\Queries\ProductDetail\TradePriceInfo.cs" />
+    <Compile Include="Databases\Queries\Shipping\LastSavedAddressByEmail.cs" />
+    <Compile Include="Databases\Queries\Shipping\ProductFreightChargeWithZone3.cs" />
+    <Compile Include="Databases\Queries\Shipping\ProductShortSkuWithZone3Shipping.cs" />
+    <Compile Include="Databases\Queries\Shipping\ShortSkuThatMeetsMinimumOrder.cs" />
+    <Compile Include="Databases\Queries\ShoppingCartEmployeeCan\LessThanTenDollarItem.cs" />
+    <Compile Include="Databases\Queries\ShoppingCartEmployee\ShortSkuWithUmrp.cs" />
+    <Compile Include="Databases\Queries\ShoppingCartPageBase\RecipientsByEmailAddedTodayFromCart.cs" />
+    <Compile Include="Databases\Queries\ShoppingCart\ItemWithExpeditedShippingMoreThan3Days.cs" />
+    <Compile Include="Databases\Queries\ShoppingCart\NotLimitedComboKitSku.cs" />
+    <Compile Include="Databases\Queries\ShoppingCart\ProductFreightCharges.cs" />
+    <Compile Include="Databases\Queries\ShoppingCart\ShortSkuQualifiedFor3rdDayShipping.cs" />
+    <Compile Include="Databases\Queries\ShoppingCart\ShortSkuWithShippingCharge.cs" />
+    <Compile Include="Databases\Queries\ShoppingCart\WhiteGloveItem.cs" />
+    <Compile Include="Databases\Queries\SortCallout\DecrementableFlagForShortSku.cs" />
+    <Compile Include="Databases\Queries\SortCallout\MoreOptionsByShortSku.cs" />
+    <Compile Include="Databases\Queries\SortCallout\OneHundredPlusColorsShortSku.cs" />
+    <Compile Include="Databases\Queries\SortCallout\ShortSkuNameAndPrice.cs" />
+    <Compile Include="Databases\Queries\SortCallout\SixteenPlusColorsCalloutByShortSku.cs" />
+    <Compile Include="Databases\Queries\SortCallout\ClearancePriceByShortSku.cs" />
+    <Compile Include="Databases\Queries\SortCallout\FreeShippingFreeReturnsInformation.cs" />
+    <Compile Include="Databases\Queries\SortCallout\FreeShippingProduct.cs" />
+    <Compile Include="Databases\Queries\SortCallout\ProductWithQuantityCallout.cs" />
+    <Compile Include="Databases\Queries\SortCallout\QuantityLeft.cs" />
+    <Compile Include="Databases\Queries\SortCallout\RandomSoldOutItemShortSku.cs" />
+    <Compile Include="Databases\Queries\SortCallout\SalePriceByShortSku.cs" />
+    <Compile Include="Databases\Queries\Sort\SearchPath.cs" />
+    <Compile Include="Databases\Entities\BuildFullSystemProductModel.cs" />
+    <Compile Include="Databases\Entities\CustomerInformationModel.cs" />
+    <Compile Include="Databases\Entities\UserPhoneInfo.cs" />
+    <Compile Include="Databases\Entities\ProductModel.cs" />
+    <Compile Include="Databases\Actions\ProductActions.cs" />
+    <Compile Include="Databases\Queries\SubmittingOrders\FindSkuBetweenTenAndTwentyDollars.cs" />
+    <Compile Include="Databases\Queries\SubmittingOrders\FindSkuGreaterThanTwoHundredDollars.cs" />
+    <Compile Include="Databases\Queries\UserProfile\UserProfile.cs" />
+    <Compile Include="Enums\SubLocationCode.cs" />
+    <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="Pages\Desktop\Email.cs" />
+    <Compile Include="Pages\Desktop\CustomerAddressInformation.cs" />
+    <Compile Include="Pages\Desktop\OrderSummaryBlock.cs" />
+    <Compile Include="Pages\Desktop\ContactUs.cs" />
+    <Compile Include="Pages\Desktop\CreateAccount.cs" />
+    <Compile Include="Pages\Desktop\EmployeeOrderLookup.cs" />
+    <Compile Include="Pages\Desktop\HeaderFooter.cs" />
+    <Compile Include="Pages\Desktop\OrderDetails.cs" />
+    <Compile Include="Pages\Desktop\OrderHistory.cs" />
+    <Compile Include="Pages\Desktop\ManageAccount.cs" />
+    <Compile Include="Pages\Desktop\Search.cs" />
+    <Compile Include="Pages\Desktop\Shipping.cs" />
+    <Compile Include="Pages\Desktop\CsrBlock.cs" />
+    <Compile Include="Utilities\SortPageProduct.cs" />
+    <Compile Include="Pages\Desktop\SortFullPageCertona.cs" />
+    <Compile Include="Pages\Desktop\SortBucket.cs" />
+    <Compile Include="Pages\Desktop\SortPla.cs" />
+    <Compile Include="Pages\Desktop\PayPal.cs" />
+    <Compile Include="Pages\Desktop\Stores.cs" />
+    <Compile Include="Pages\Desktop\WishList.cs" />
+    <Compile Include="Pages\Desktop\Home.cs" />
+    <Compile Include="Pages\Desktop\CartOverview.cs" />
+    <Compile Include="Pages\Desktop\OrderConfirmation.cs" />
+    <Compile Include="Pages\Desktop\Payment.cs" />
+    <Compile Include="Pages\Desktop\SignIn.cs" />
+    <Compile Include="Pages\Desktop\Sort.cs" />
+    <Compile Include="Pages\Desktop\ProductDetail.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestsBase.cs" />
+    <Compile Include="Utilities\Certona\CertonaUtilities.cs" />
+    <Compile Include="Constants\StreetCityStateCountry\CountryCodeList.cs" />
+    <Compile Include="Utilities\Payment\CreditCard.cs" />
+    <Compile Include="Utilities\Account.cs" />
+    <Compile Include="Utilities\Environment\DevEnvInformation.cs" />
+    <Compile Include="Utilities\Payment\CreditCards.cs" />
+    <Compile Include="Utilities\Payment\PromoCode.cs" />
+    <Compile Include="Utilities\Payment\PromoCodeList.cs" />
+    <Compile Include="Constants\CreditCardMonthList.cs" />
+    <Compile Include="Utilities\ProductModel.cs" />
+    <Compile Include="Utilities\ShippingOptionItem.cs" />
+    <Compile Include="Constants\StreetCityStateCountry\StateCodeListUnitedStates.cs" />
+    <Compile Include="Utilities\TestConfiguration\TestConfigurationModel.cs" />
+    <Compile Include="Constants\StreetCityStateCountry\ZipCodeList.cs" />
+    <Compile Include="Utilities\Urls.cs" />
+    <Compile Include="Utilities\UtagData.cs" />
+    <Compile Include="Utilities\UtagDataModel.cs" />
+    <Compile Include="Workflow\Base\CommonWorkflowBase.cs" />
+    <Compile Include="Workflow\Base\CreateAccountWorkflowBase.cs" />
+    <Compile Include="Workflow\Base\GlobalSetupWorkflowBase.cs" />
+    <Compile Include="Workflow\Base\GlobalTeardownWorkflowBase.cs" />
+    <Compile Include="Workflow\Desktop\CheckoutWorkflow.cs" />
+    <Compile Include="Workflow\ICheckoutWorkflow.cs" />
+    <Compile Include="Workflow\ISubmittingOrdersWorkflow.cs" />
+    <Compile Include="Workflow\Base\SubmittingOrdersWorkflowBase.cs" />
+    <Compile Include="Workflow\ICreateAccountWorkflow.cs" />
+    <Compile Include="Workflow\IManageAccountWorkflow.cs" />
+    <Compile Include="Workflow\Base\ManageAccountWorkflowBase.cs" />
+    <Compile Include="Workflow\ISortWorkflow.cs" />
+    <Compile Include="Workflow\Base\SortWorkflowBase.cs" />
+    <Compile Include="Workflow\ISignInWorkflow.cs" />
+    <Compile Include="Workflow\Base\SignInWorkflowBase.cs" />
+    <Compile Include="Workflow\IShoppingCartWorkflow.cs" />
+    <Compile Include="Workflow\IGlobalTeardownWorkflow.cs" />
+    <Compile Include="Workflow\IGlobalSetupWorkflow.cs" />
+    <Compile Include="Workflow\ICommonWorkflow.cs" />
+    <Compile Include="Workflow\Base\ShoppingCartWorkflowBase.cs" />
+    <Compile Include="Workflow\Base\CheckoutWorkflowBase.cs" />
+    <Compile Include="Workflow\Desktop\CommonWorkflow.cs" />
+    <Compile Include="Workflow\Mobile\MobileCheckoutWorkflow.cs" />
+    <Compile Include="Workflow\Mobile\MobileCreateAccountWorkflow.cs" />
+    <Compile Include="Workflow\Mobile\MobileCommonWorkflow.cs" />
+    <Compile Include="Workflow\Desktop\CreateAccountWorkflow.cs" />
+    <Compile Include="Workflow\Desktop\GlobalSetupWorkflow.cs" />
+    <Compile Include="Workflow\Desktop\GlobalTeardownWorkflow.cs" />
+    <Compile Include="Workflow\Mobile\MobileGlobalSetupWorkflow.cs" />
+    <Compile Include="Workflow\Mobile\MobileGlobalTeardownWorkflow.cs" />
+    <Compile Include="Workflow\Mobile\MobileManageAccountWorkflow.cs" />
+    <Compile Include="Workflow\Mobile\MobileShoppingCartWorkflow.cs" />
+    <Compile Include="Workflow\Desktop\SubmittingOrdersWorkflow.cs" />
+    <Compile Include="Workflow\Desktop\SignInWorkflow.cs" />
+    <Compile Include="Workflow\Desktop\ManageAccountWorkflow.cs" />
+    <Compile Include="Workflow\Desktop\SortWorkflow.cs" />
+    <Compile Include="Workflow\Desktop\ShoppingCartWorkflow.cs" />
+    <Compile Include="Workflow\Mobile\MobileSubmittingOrdersWorkflow.cs" />
+    <Compile Include="Workflow\Base\WorkflowBase.cs" />
+    <Compile Include="Workflow\Mobile\MobileSignInWorkflow.cs" />
+    <Compile Include="Workflow\Mobile\MobileSortWorkflow.cs" />
+    <Compile Include="Workflow\Refactored\GoogleAnalyticsWorkflow\GoogleAnalyticsWorkflowMobile.cs" />
+    <Compile Include="Workflow\Refactored\GoogleAnalyticsWorkflow\GoogleAnalyticsWorkflowDesktop.cs" />
+    <Compile Include="Workflow\Refactored\GoogleAnalyticsWorkflow\IGoogleAnalyticsWorkflowMobile.cs" />
+    <Compile Include="Workflow\Refactored\GoogleAnalyticsWorkflow\IGoogleAnalyticsWorkflowDesktop.cs" />
+    <Compile Include="Workflow\Refactored\HeaderFooterWorkflow\HeaderFooterWorkflowDesktop.cs" />
+    <Compile Include="Workflow\Refactored\HeaderFooterWorkflow\IHeaderFooterWorkflowDesktop.cs" />
+    <Compile Include="Workflow\Refactored\CertonaWorkflow\CertonaWorkflowDesktop.cs" />
+    <Compile Include="Workflow\Refactored\CertonaWorkflow\CertonaWorkflowMobile.cs" />
+    <Compile Include="Workflow\Refactored\CertonaWorkflow\ICertonaWorkflowDesktop.cs" />
+    <Compile Include="Workflow\Refactored\CertonaWorkflow\ICertonaWorkflowMobile.cs" />
+    <Compile Include="Workflow\Refactored\RoomViewerWorkflow\IRoomViewerWorkflowDesktop.cs" />
+    <Compile Include="Workflow\Refactored\RoomViewerWorkflow\IRoomViewerWorkflowMobile.cs" />
+    <Compile Include="Workflow\Refactored\RoomViewerWorkflow\RoomViewerWorkflowDesktop.cs" />
+    <Compile Include="Workflow\Refactored\RoomViewerWorkflow\RoomViewerWorkflowMobile.cs" />
+    <Compile Include="Workflow\Refactored\ShoppingCartWorkflow\IShoppingCartWorkflowDesktop.cs" />
+    <Compile Include="Workflow\Refactored\ShoppingCartWorkflow\IShoppingCartWorkflowMobile.cs" />
+    <Compile Include="Workflow\Refactored\ShoppingCartWorkflow\ShoppingCartWorkflowDesktop.cs" />
+    <Compile Include="Workflow\Refactored\ShoppingCartWorkflow\ShoppingCartWorkflowMobile.cs" />
+    <Compile Include="Workflow\Refactored\GlobalSetupWorkflow\GlobalSetupWorkflowDesktop.cs" />
+    <Compile Include="Workflow\Refactored\GlobalSetupWorkflow\GlobalSetupWorkflowMobile.cs" />
+    <Compile Include="Workflow\Refactored\GlobalSetupWorkflow\IGlobalSetupWorkflowDesktop.cs" />
+    <Compile Include="Workflow\Refactored\GlobalSetupWorkflow\IGlobalSetupWorkflowMobile.cs" />
+    <Compile Include="Workflow\Refactored\ManageAccountWorkflow\IManageAccountWorkflowDesktop.cs" />
+    <Compile Include="Workflow\Refactored\ManageAccountWorkflow\IManageAccountWorkflowMobile.cs" />
+    <Compile Include="Workflow\Refactored\ManageAccountWorkflow\ManageAccountWorkflowDesktop.cs" />
+    <Compile Include="Workflow\Refactored\ManageAccountWorkflow\ManageAccountWorkflowMobile.cs" />
+    <Compile Include="Workflow\Refactored\CreateAccountWorkflow\ICreateAccountWorkflowDesktop.cs" />
+    <Compile Include="Workflow\Refactored\CreateAccountWorkflow\ICreateAccountWorkflowMobile.cs" />
+    <Compile Include="Workflow\Refactored\CreateAccountWorkflow\CreateAccountWorkflowDesktop.cs" />
+    <Compile Include="Workflow\Refactored\CreateAccountWorkflow\CreateAccountWorkflowMobile.cs" />
+    <Compile Include="Workflow\Refactored\GlobalTeardownWorkflow\IGlobalTeardownWorkflowDesktop.cs" />
+    <Compile Include="Workflow\Refactored\GlobalTeardownWorkflow\IGlobalTeardownWorkflowMobile.cs" />
+    <Compile Include="Workflow\Refactored\GlobalTeardownWorkflow\GlobalTeardownWorkflowDesktop.cs" />
+    <Compile Include="Workflow\Refactored\GlobalTeardownWorkflow\GlobalTeardownWorkflowMobile.cs" />
+    <Compile Include="Workflow\Refactored\SearchWorkflow\ISearchWorkflowDesktop.cs" />
+    <Compile Include="Workflow\Refactored\SearchWorkflow\ISearchWorkflowMobile.cs" />
+    <Compile Include="Workflow\Refactored\SearchWorkflow\SearchWorkflowDesktop.cs" />
+    <Compile Include="Workflow\Refactored\SearchWorkflow\SearchWorkflowMobile.cs" />
+    <Compile Include="Workflow\Refactored\SortWorkflow\ISortWorkflowDesktop.cs" />
+    <Compile Include="Workflow\Refactored\SortWorkflow\ISortWorkflowMobile.cs" />
+    <Compile Include="Workflow\Refactored\SortWorkflow\SortWorkflowDesktop.cs" />
+    <Compile Include="Workflow\Refactored\SortWorkflow\SortWorkflowMobile.cs" />
+    <Compile Include="Workflow\Refactored\SubmittingOrdersWorkflow\ISubmittingOrdersWorkflowDesktop.cs" />
+    <Compile Include="Workflow\Refactored\SubmittingOrdersWorkflow\ISubmittingOrdersWorkflowMobile.cs" />
+    <Compile Include="Workflow\Refactored\SubmittingOrdersWorkflow\SubmittingOrdersWorkflowDesktop.cs" />
+    <Compile Include="Workflow\Refactored\SubmittingOrdersWorkflow\SubmittingOrdersWorkflowMobile.cs" />
+    <Compile Include="Workflow\Refactored\SubscribeToEmailsWorkflow\ISubscribeToEmailsWorkflowDesktop.cs" />
+    <Compile Include="Workflow\Refactored\SubscribeToEmailsWorkflow\ISubscribeToEmailsWorkflowMobile.cs" />
+    <Compile Include="Workflow\Refactored\SubscribeToEmailsWorkflow\SubscribeToEmailsWorkflowDesktop.cs" />
+    <Compile Include="Workflow\Refactored\SubscribeToEmailsWorkflow\SubscribeToEmailsWorkflowMobile.cs" />
+    <Compile Include="Workflow\Refactored\WishListWorkflow\IWishListWorkflowDesktop.cs" />
+    <Compile Include="Workflow\Refactored\WishListWorkflow\IWishListWorkflowMobile.cs" />
+    <Compile Include="Workflow\Refactored\WishListWorkflow\WishListWorkflowDesktop.cs" />
+    <Compile Include="Workflow\Refactored\WishListWorkflow\WishListWorkflowMobile.cs" />
+    <Compile Include="Workflow\Refactored\CommonWorkflow\ICommonWorkflowDesktop.cs" />
+    <Compile Include="Workflow\Refactored\CommonWorkflow\ICommonWorkflowMobile.cs" />
+    <Compile Include="Workflow\Refactored\CommonWorkflow\CommonWorkflowDesktop.cs" />
+    <Compile Include="Workflow\Refactored\CommonWorkflow\CommonWorkflowMobile.cs" />
+    <Compile Include="Workflow\Refactored\CheckoutWorkflow\ICheckoutWorkflowDesktop.cs" />
+    <Compile Include="Workflow\Refactored\CheckoutWorkflow\ICheckoutWorkflowMobile.cs" />
+    <Compile Include="Workflow\Refactored\CheckoutWorkflow\CheckoutWorkflowDesktop.cs" />
+    <Compile Include="Workflow\Refactored\CheckoutWorkflow\CheckoutWorkflowMobile.cs" />
+    <Compile Include="Workflow\Refactored\SignInWorkflow\ISignInWorkflowDesktop.cs" />
+    <Compile Include="Workflow\Refactored\SignInWorkflow\ISignInWorkflowMobile.cs" />
+    <Compile Include="Workflow\Refactored\SignInWorkflow\SignInWorkflowDesktop.cs" />
+    <Compile Include="Workflow\Refactored\SignInWorkflow\SignInWorkflowMobile.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="lampsplusAutomationFramework.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Utilities\Certona\RecommendedItemsConfiguration.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Utilities\Certona\RecommendedItemsMobileConfiguration.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Databases\Enums\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Automation.Framework\Automation.Framework.csproj">
+      <Project>{97b3599f-0e11-4d64-b0e7-4ec88285679a}</Project>
+      <Name>Automation.Framework</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Analyzer Include="..\packages\xunit.analyzers.1.0.0\analyzers\dotnet\cs\xunit.analyzers.dll" />
+    <Analyzer Include="..\packages\xunit.analyzers.1.0.0\analyzers\dotnet\cs\xunit.analyzers.fixes.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\xunit.runner.console.2.4.2\build\xunit.runner.console.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\xunit.runner.console.2.4.2\build\xunit.runner.console.props'))" />
+    <Error Condition="!Exists('..\packages\xunit.core.2.4.2\build\xunit.core.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\xunit.core.2.4.2\build\xunit.core.props'))" />
+    <Error Condition="!Exists('..\packages\xunit.core.2.4.2\build\xunit.core.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\xunit.core.2.4.2\build\xunit.core.targets'))" />
+    <Error Condition="!Exists('..\packages\xunit.runner.visualstudio.2.4.5\build\net462\xunit.runner.visualstudio.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\xunit.runner.visualstudio.2.4.5\build\net462\xunit.runner.visualstudio.props'))" />
+    <Error Condition="!Exists('..\packages\Eyes.Sdk.Universal.Core.2.16.9\build\Eyes.Sdk.Universal.Core.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Eyes.Sdk.Universal.Core.2.16.9\build\Eyes.Sdk.Universal.Core.targets'))" />
+    <Error Condition="!Exists('..\packages\Selenium.WebDriver.ChromeDriver.119.0.6045.10500\build\Selenium.WebDriver.ChromeDriver.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Selenium.WebDriver.ChromeDriver.119.0.6045.10500\build\Selenium.WebDriver.ChromeDriver.targets'))" />
+  </Target>
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <ProjectGuid>{71A023E9-6B3F-45EF-ABA6-5ABAC8BFCC64}</ProjectGuid>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <ProjectExtensions />
+  <Import Project="..\packages\xunit.core.2.4.2\build\xunit.core.targets" Condition="Exists('..\packages\xunit.core.2.4.2\build\xunit.core.targets')" />
+  <Import Project="..\packages\Eyes.Sdk.Universal.Core.2.16.9\build\Eyes.Sdk.Universal.Core.targets" Condition="Exists('..\packages\Eyes.Sdk.Universal.Core.2.16.9\build\Eyes.Sdk.Universal.Core.targets')" />
+  <Import Project="..\packages\Selenium.WebDriver.ChromeDriver.119.0.6045.10500\build\Selenium.WebDriver.ChromeDriver.targets" Condition="Exists('..\packages\Selenium.WebDriver.ChromeDriver.119.0.6045.10500\build\Selenium.WebDriver.ChromeDriver.targets')" />
+</Project>
