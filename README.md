@@ -1,21 +1,21 @@
-# Lamps Plus test-automation
-Provides automation support to test the desktop view of the Lamps Plus website.
+# ProjectX test-automation
+Provides automation support to test the desktop view of the ProjectX website.
 
 ## Project Links
 ### Source Code (Bitbucket)
-LampsPlus/TestAutomation https://bitbucket.lampsplus.com:8443/projects/LAMPS/repos/test-automation/
+ProjectX/TestAutomation https://bitbucket.ProjectX.com:8443/projects/LAMPS/repos/test-automation/
 
 ### Project Kanban (JIRA)
-https://lampstrack.lampsplus.com:8443/secure/RapidBoard.jspa?rapidView=215
+https://lampstrack.ProjectX.com:8443/secure/RapidBoard.jspa?rapidView=215
 
 ### Test Automation Chat Room (slack)
 qa-automation-chat
 
 ### Build Plan(s) (Bamboo)
-https://bamboo.lampsplus.com:8443/browse/TES
+https://bamboo.ProjectX.com:8443/browse/TES
 
 ### Test Automation System Documentation (Confluence)
-https://confluence.lampsplus.com:8093/pages/viewpage.action?spaceKey=TA&title=Test+Automation
+https://confluence.ProjectX.com:8093/pages/viewpage.action?spaceKey=TA&title=Test+Automation
 
 ### Weekly Test Automation Sync Meeting
 We have a standing weekly meeting to discuss the current state of test automation. The meeting is scheduled **Wednesdays @2PM typically held in the Conference Room 20250 Upstairs conference room**.
@@ -35,7 +35,7 @@ This project is self-contained and contains all necessary libraries provided by 
 
 ## Documentation
 Dynamic information that changes frequently can be found in source control in the [Documentation folder](./Documentation).
-Planning information, meeting minutes, and general information can be found in the [Test Automation Confluence Space](https://confluence.lampsplus.com:8093/pages/viewpage.action?spaceKey=TA&title=Test+Automation).
+Planning information, meeting minutes, and general information can be found in the [Test Automation Confluence Space](https://confluence.ProjectX.com:8093/pages/viewpage.action?spaceKey=TA&title=Test+Automation).
 
 ### General Information
 #### [View MD Files in Chrome](./Documentation/General%20Information/View%20MD%20Files%20in%20Chrome.md)
